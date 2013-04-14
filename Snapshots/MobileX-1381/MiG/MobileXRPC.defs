@@ -1,0 +1,52 @@
+subsystem MobileXRPC 800000;
+
+#include <mach/std_types.defs>
+#include <mach/mach_types.defs>
+
+import "MXRPCCommon.h";
+serverprefix _MXRPCCall_;
+userprefix MXR;
+
+//Types
+type string_t = c_string[*:1024];
+type serialized_t    = ^ array [] of MACH_MSG_TYPE_BYTE
+	ctype : serialized_t;
+
+routine CopyApplicationList(
+	server : mach_port_t;
+	out list : serialized_t;
+	ServerAuditToken token : audit_token_t
+			); //0		
+	
+routine LaunchApplication(
+	server : mach_port_t;
+	identifier: string_t;
+	ServerAuditToken token : audit_token_t
+			); //1
+	
+//Obsolete	
+routine CheckIn(
+	server : mach_port_t;
+	isFullscreen: boolean_t;
+	windowLevel: integer_t;
+	shouldOffsetizeContext: boolean_t;
+	keepAlive: boolean_t;
+	contextSizeWidth: float;
+	contextSizeHeight: float;
+	contextOriginX: float;
+	contextOriginY: float;
+	ServerAuditToken token : audit_token_t
+			); //2		
+
+routine CopyScreenDimensions(
+	server : mach_port_t;
+	out width: integer_t;
+	out height: integer_t;
+	ServerAuditToken token : audit_token_t
+			); //3
+			
+routine CallMethod(
+	server : mach_port_t;
+	selector: integer_t;
+	ServerAuditToken token : audit_token_t
+			); //4

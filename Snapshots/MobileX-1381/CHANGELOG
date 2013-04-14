@@ -1,0 +1,308 @@
+### Changes
+
+	* May 1
+	
+		* MXLaunchd Tools : Added Jetsam support
+		* MXProcess priorities
+		* MXProcess jetsam
+		* main() args
+			* start with launchd
+			* kill launchd job
+		* MXProcess : waitForExecOrExit
+		* MXApplication : UIRoles 
+		* Moved a lot of application bundle loading code into MXApplicationController
+		* Better logging (MXSLog & MXLog)
+		* Removed some logging points
+		* MXHID : Hid level support for buttons (home,vol,ringer,power)
+		* MXApplication : Mach Services
+		* MXHostWindow : MXWindow subclass for hosting apps
+		* MXApplication : Delegating
+		* MXPane & MXPaneManager : (De)activate if needed (works faster)
+		* MXApplication : better icon loading
+		* MXApplicationController : SBAppTags support
+		
+	* May 2
+	
+		* MXHID : Backlight controls
+		* MXHID : UsagePage based svc fetch
+		* MXPane : isEqual
+		* MXWindow : Separated metrics from drawing
+		* MXWindow : Window style support
+		* MXWindow : Separated drawing code
+		* MXWindowButton : Sorted out the pain-in-the-arse event handing (now uses MXControl)
+		* MXMultitouchHandler
+			* Manages all multitouch events
+			* A more "universal" approach to event distribution
+		* CALayer+MX : Adapted for MXMultitouchHandler
+		* MXController : No longer handles multitouch event distribution
+		* MXScrollLayer : Added some sort of inertia (very very shitty)
+		
+	* May 4
+	
+		* Moved most of the UI code to MXUIController
+		* Settings controller
+		* Removed Window shadow
+		* Fullscreen window support
+		* Fullscreen app layer support
+		* MXUIDrawing : Fixed gradient rectangles
+	
+	* May 5
+	
+		* Merged with 'chpwn/MobileX'
+			* Replaced:
+				* MXUIController
+				* MXIcon
+				* MXDesktopController
+			* Merged: 
+				* MXScrollLayer
+			
+	* May 7
+	
+		* MXScroller : Styled scroller
+		* MXScroller : "Default" style with white border
+		* MXScrollLayer : Proper animation on inertia
+			* Using CABasicAnimation
+			* EaseOut
+			* Plots points for each scroll action
+			* Can bounce in any direction
+			* Animated scrollers
+		* MXScrollLayer : Using MXScroller as a scroller
+		* MXScrollLayer : Scroller styles
+		* MXScrollLayer : Scrollers fade out on stop
+		* MXScrollLayer : Points freed on dealloc
+		* MXScrollLayer : MXBoundScrollLayer instead of CAScrollLayer
+		* MXScrollLayer : Fixed scroll axis support (horiz,vert,horiz+vert) 
+		* MXWindow : Fully supported borderless windows
+		* MXRenderLayer : Now based on MXControl 
+		* MXHID : Different event dispatching for hosts
+		* MXMT : Fixed window movement bug when touch got over a host
+		* MXMT : Added the ability for a new first responder to cancel the event on the last first responder
+		* MXPanePreview : Fixed a bug which caused a crash on window move
+		* MXTaskbar : Rewrote drawing code for the "MacOS X" dock look with gloss
+		* MXCG : Stripped old routines
+		* MXUIDrawing : Drawing 3D UI buttons routines
+		* MXButton : Using the new 3D routines
+		* MXControl : Added a new set of "addTarget"s for sender(id) support
+		* MXCheckbox : Added. This is a simple checkbox
+		* MXTableView & MXTableViewCell : Very basic support, so far - very crappy.
+		* MXSettingsController : Basic skeleton - needs a lot of work.
+		* MXPaneManager & MXPane : Autoposition
+		* MXIcon & MXIconImage : CG based shadows and gloss
+			* Changed the icon layer size to {130, 150}
+		* CA : Added all the necessary CARenderServer headers so it compiles without warnings
+		* CG : Added a header with the private functions defined
+		* MXIcon : More UIKit-ish gloss (bottom gradient for the icon)
+		* MXScrollLayer : Paging support
+			* Automatically determines page size
+			* Only works for the vertical axis
+			* Number of pages has to be a whole number (contentSize / frameSize)
+		* MXScrollLayer : setContentOffset+animation
+		* MobileX : Screensaver mode (-b arg)
+		* MXScrollLayer : MXScrollLayerDelegate
+			* Implemented a set of delegate methods as a category of NSObject
+			
+	* May 8
+	
+		* MXFont : CGFontRef wrapper
+			* Font cache loaded at startup
+			* Support for bold & regular fonts
+		* MXText : Font setting support
+		* MXText : CG Shadows
+		
+	* May 14
+	
+		* MXScrollLayer : No longer floods the composer with layers
+		* MXTableView : UIKit-like delegate
+		* MXTableView : Support for sections
+		* MXPane : show/hide
+			* MXPaneManager impl
+		* MXMenu : Simple menus
+		* MXLayer : Base layer for all the MXkit layers
+		* MXFont : Now loads all fonts per file
+		* MXMainLayer : Cleaned up screenshot taking code
+		* MXImage : Added the ability to save images
+		* MXScreenCapture : Functions to convert layers to images
+		* MXPane & MXPaneManager : Hiding functionality
+		* MXPane & MXPaneManager : ForceTopmost panes
+		* MXDashboard
+			* MXDashboardLayer : Blurry layer for a future dashboard
+			* MXDashboardController : Nothing yet. Just show/hide.
+		* MXHID : Keyboard events are now actually detected
+		* MXEventHandling : Keyboard events now reach the event handler
+		* MXHardwareButtons : Enum for hardware keys 
+		* MXEventHandling : GS Brightness changes
+		* MXDevice : Battery information functions
+		* MXDevice : IOPlatformExpert Information
+		* MXQuartzWindowServer : Window Server support functions
+		* MXHID : UI lockdown capability
+		* MXSleepController : Soft sleep suppport
+		* MX : Power button now puts the device in soft sleep mode
+		
+	* May 15
+	
+		* MXTableView : Now supports two styles fully
+			 * Plain
+			 * Segmented
+		* MXSBInitialization : A set of functions similar to the ones SB runs at launch
+		* MXTesting : CT testing (temp)
+		* MXPreferencesWindowController : Simple prefs window
+		
+	* May 26
+	
+		*  MXApplication
+			* Resuming
+			* Suspension
+			* Activation Settings
+			* Serialization
+			* Check in records
+			* Fixed up activation counter
+			* Logging is now optional
+		* MXApplicationController
+			* Application for Pid
+			* Auto-launch queue
+		* MXPane
+			* Fixed pane support
+			* Frame storage and restoration
+			* Fixed activation issues for panes
+		* AppSupport Port
+			* CPMIGServerSource
+				* Attaching MiG systems to run loops
+				* Linked audit tokens
+				* Callback via 'mach_msg'
+				* Creating sources
+			* CPMIGProbing
+				* Probing in-memory structures
+				* Probing MiG headers
+		* MX RPC
+			* MiG RPC Implementation
+				* Launching Applications
+				* Copying Application dictionaries
+				* Screen dimensions
+		* MXPortCache
+			* Port cache for quick lookups for GSMT
+		* SpringBoardServices
+			* Support for audit tokens
+		* MXRenderManager
+			* Pushing contexts
+			* Host window management
+		* UIStatusBarServer
+			* Empty Implementation
+		* MXApplicationStateServices
+			* Unified launching function
+				* Support for MXCheckIn
+					* Window levels
+					* Context offsets
+					* Classic modes
+				* Application resumption
+		* MXEventHandling+MXHID
+			* Rapid hit-testing for contexts
+			* Port cache lookups
+		* MXPaneManager
+			* Expose
+				* Rendered cross images
+				* Animated scaling and expanding
+				* Darkened Expose layer
+			* Reveal
+				* Basic off-screen reveal
+		* MXImage
+			* Image loading from the resource bundle
+			* "MobileXSupport.bundle"
+	
+	* 31 May
+		
+		* MXPaneManager+Expose
+			* Locking
+			* Working grid layout system
+			* Proportional scaling
+			* Timed cross addition
+			* Support for realignment
+		* MXApplication
+			* Added Info.plist type checks
+				* Type checks make sure that all Info.plist bits are of the right types
+				* Apps with mismatched types aren't loaded
+		* MXApplicationStateServices
+			* Locks on app launching
+			* Support for full screen applications is back
+		* MXWindow
+			* Fixed a very-small shadow fuck-up (- instead of +)
+		* MXUIController
+			* Dropped support for the application list and a wallpaper
+		* MXHID
+			* Multitouch support
+				* Iterates over IOHIDMT children
+				* First child is the master event
+				* Others are just extra fingers/touches
+			
+	* 4 Jun
+		
+		* MXHID
+			* Debugging modes
+			* Accelerometer support 
+			
+	* 8 Jun
+		
+		* MXIPCSupport
+			* MXIPCStartServer : A function to create and start IPC servers
+			* MXIPCStartServer : Extended error handling
+		* UIStatusBarServer
+			* Now sends valid status bar data
+			* Works via the data request message
+		* MXRenderLayer
+			* The ability to take application snapshots
+			* Better stack management, window level support
+			* A background image to hold the snapshots while on suspend
+			* Renamed some methods
+		* MXScreenCapture
+			* Rendering separate contexts
+			* Rendering context lists
+		* MXApplication
+			* Application rotation
+			
+	* 11 Jun
+	
+		* MXProcess
+			* Fixed a kevent issue where the app would hang up
+		* MXLayer
+			* Filtering actions by keys
+		* MXApplication
+			* Support for activating with orientations
+			* Status bar styles
+		
+	* 26 Nov
+	
+		* MXHIDController
+			* HID system updated for iOS 5
+			* Multitouch events are now allocated correct amounts of memory
+		* MXLaunchdTools
+			* Updated for iOS 5
+		* uiKitProxy
+			* Basic system for running MobileX as a UIKit app
+		* ImageLoaderMachO
+			* A more advanced version of Saurik's Nlist
+		* UIKitSharedImagesServer
+			* Now fully working using the imported UIKit symbols
+		
+			
+				
+					
+						
+							
+								
+									
+										
+											
+												
+													
+														
+															
+																
+																	
+																		
+																			
+																					
+		
+	
+		
+		 
+		   
+		

@@ -1,0 +1,49 @@
+General Information About UIKit
+#######################################
+
+ * Rendering
+	* UIKit applications use UIWindow(s) to display their layers
+		* UIWindow wraps CAContext
+			* Used keys
+				* kCAContextDisplayName: "LCD" or "TVOut"
+				* kCAContextEnablePixelDoubling:kCFBoolean
+				* kCAContextDisableEdgeAntialiasing:kCFBoolean
+				* kCAContextDisableGroupOpacity:kCFBoolean
+				* kCAContextIgnoresHitTest:kCFBoolean
+		* A UIView-CALayer is attached to a CAContext
+		* Windows are stacked
+		* When a window is displayed, UIKit posts a MiG message to SBS so it adds a context
+		* In that way, the SBS handler acts as a stacking window manager
+		
+ * Orientation Settings
+	* Changed via kGSEventDeviceOrientationChanged
+		* One int argument corresponding to the mode
+	* Available Modes
+		* 	 +------+
+			 |      |
+			 |     o|
+			 |      |
+			 +------+
+		* Default:
+			* 0: Default
+		* Portrait:
+			* 1: Bottom Bezel
+			* 2: Top bezel
+		* Landscape:
+			* 3: Left bezel
+			* 4: Right bezel
+
+ * Subsystems
+	* Main MiG Server
+		* Started in UIStartMIGServer
+		* Identified as BUNDLE_ID.UIKit.migserver
+	* Status bar Server
+		* Started in -[UIStatusBarServerThread main]
+		* Identified as com.apple.UIKit.statusbarserver
+		* Routines 33000-33015 
+			* 33000 UIStatusBarAddClient: (int xx, int xx)
+			* 33012 Get Overrides: (void)
+			* 33011 Get Data: (void)
+			* 33014 Double Height: (int xx)
+			* 33013 Get Glow: (int xx)
+			

@@ -1,0 +1,34 @@
+/*
+ *  MobileX_Prefix.pch
+ *  MobileX
+ */
+
+/* please, go and die in a fucking hole */
+#ifdef NS_BLOCK_ASSERTIONS
+	#undef NS_BLOCK_ASSERTIONS
+#endif
+
+
+#include <libkern/OSAtomic.h>
+
+#import "MTTouchType.h"
+#import "MXHardwareButton.h"
+
+#import "NSDictionary+BOOL.h"
+
+#import <QuartzCore/QuartzCore.h>
+#import <CoreGraphics/CoreGraphics.h>
+
+#import "MXLoggingMacros.h"
+
+#import "CALayer+MX.h"
+
+#define SC(x) x
+
+#define MC_Border1 RGB(0.2,0.3,0.4)
+#define MC_Border2 RGB(0.4,0.5,0.9)
+#define MC_Fill RGB(0.3,0.5,0.7)
+
+#define DegreesToRadians(d) ((d) * M_PI / 180.0)
+
+float MXScale();

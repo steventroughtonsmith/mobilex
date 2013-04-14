@@ -1,0 +1,9 @@
+{
+	Name = MobileX;
+	Deployment = {
+		ItemDestination = "/var/root";
+	};
+	Project = {
+		"UseDefaultProjectFile" = YES;
+	};
+}

@@ -1,0 +1,36 @@
+subsystem MXUIStatusBar 33000;
+
+#include <mach/std_types.defs>
+#include <mach/mach_types.defs>
+
+import "MXUIStatusBarServerCommon.h";
+serverprefix _MXUIXXStatusBarServer_;
+userprefix MXUIStatusBar;
+
+type string_t = c_string[*:1024];
+type serialized_t    = ^ array [] of MACH_MSG_TYPE_BYTE
+	ctype : serialized_t;
+	
+Skip; // 33000
+Skip; // 33001
+Skip; // 33002
+Skip; // 33003
+Skip; // 33004
+Skip; // 33005
+Skip; // 33006
+Skip; // 33007
+Skip; // 33008
+Skip; // 33009
+Skip; // 33010
+
+routine GetStatusBarData(
+	server : mach_port_t;
+	out list : serialized_t;
+	ServerAuditToken token : audit_token_t
+			); //0		
+// 33011
+
+Skip; // 33012
+Skip; // 33013
+Skip; // 33014
+Skip; // 33015

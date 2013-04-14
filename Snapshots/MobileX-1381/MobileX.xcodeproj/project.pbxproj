@@ -1,0 +1,1925 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 45;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		016A0B4E148A8446007E6F5A /* ImageLoaderMachO.mm in Sources */ = {isa = PBXBuildFile; fileRef = 016A0B4C148A8446007E6F5A /* ImageLoaderMachO.mm */; };
+		017C7FAC14AE742F003F175D /* legacyUiSharedImageServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C7FAB14AE742F003F175D /* legacyUiSharedImageServer.m */; };
+		01936FA814995AB4001B31EC /* LEGACY_MT in Resources */ = {isa = PBXBuildFile; fileRef = 01936FA714995AB4001B31EC /* LEGACY_MT */; };
+		01C17E2614810EF500316325 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C17E2514810EF500316325 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
+		01C17E331481236C00316325 /* uiKitProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C17E321481236C00316325 /* uiKitProxy.m */; };
+		1D60589B0D05DD56006BFB54 /* MobileX.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* MobileX.m */; };
+		680D63AF139ADF3A00B30370 /* MXRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 680D63AD139ADF3A00B30370 /* MXRPCClient.m */; };
+		680D63B0139ADF3B00B30370 /* MXRPCMigServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 680D63AE139ADF3A00B30370 /* MXRPCMigServer.m */; };
+		6810FB801200AB1700B3E2C3 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6810FB7F1200AB1700B3E2C3 /* Info.plist */; };
+		6814E86713845D3C005205E5 /* MXFolderIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 6814E86613845D3C005205E5 /* MXFolderIcon.m */; };
+		6814E8DD138462E8005205E5 /* MXPaneManager+Reveal.m in Sources */ = {isa = PBXBuildFile; fileRef = 6814E8DC138462E8005205E5 /* MXPaneManager+Reveal.m */; };
+		68232E65136F8A2E005AAA65 /* MXGestureRecognizer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68232E64136F8A2E005AAA65 /* MXGestureRecognizer.m */; };
+		68232E6B136F8B6F005AAA65 /* MXMultitouchHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 68232E6A136F8B6F005AAA65 /* MXMultitouchHandler.m */; };
+		68232FBE1371C79E005AAA65 /* MXSettingsController.m in Sources */ = {isa = PBXBuildFile; fileRef = 68232FBD1371C79E005AAA65 /* MXSettingsController.m */; };
+		682331211372FB10005AAA65 /* MXApplicationIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331201372FB10005AAA65 /* MXApplicationIcon.m */; };
+		682331391372FB85005AAA65 /* MXIconController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331341372FB85005AAA65 /* MXIconController.m */; };
+		6823313A1372FB85005AAA65 /* MXIconListLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331361372FB85005AAA65 /* MXIconListLayer.m */; };
+		6823313B1372FB85005AAA65 /* MXIconScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331381372FB85005AAA65 /* MXIconScrollLayer.m */; };
+		682331421372FBB6005AAA65 /* MXDesktopController.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331411372FBB6005AAA65 /* MXDesktopController.m */; };
+		682331501372FC0B005AAA65 /* MXWallpaperLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 6823314F1372FC0B005AAA65 /* MXWallpaperLayer.m */; };
+		682331551372FC2A005AAA65 /* MXDesktopLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331541372FC2A005AAA65 /* MXDesktopLayer.m */; };
+		682331721372FD47005AAA65 /* MXScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 682331711372FD47005AAA65 /* MXScrollLayer.m */; };
+		683D4E0913753F7E0044480D /* MXBoundScrollLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D4E0813753F7E0044480D /* MXBoundScrollLayer.m */; };
+		683D503613756A050044480D /* MXScroller.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D503513756A050044480D /* MXScroller.m */; };
+		683D58611376BF130044480D /* MXFont.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D58601376BF130044480D /* MXFont.m */; };
+		683D59FB13773B350044480D /* MXMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D59FA13773B350044480D /* MXMenu.m */; };
+		683D5A5213773F470044480D /* MXMenuItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 683D5A5113773F470044480D /* MXMenuItem.m */; };
+		684A7A701362F9C000B4F68C /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684A7A6F1362F9C000B4F68C /* QuartzCore.framework */; };
+		684A7A8A1362FA9E00B4F68C /* MXController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7A891362FA9E00B4F68C /* MXController.m */; };
+		684A7A931362FBCA00B4F68C /* MXMainLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7A921362FBCA00B4F68C /* MXMainLayer.m */; };
+		684A7AA21362FD6A00B4F68C /* MXColors.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7AA11362FD6A00B4F68C /* MXColors.m */; };
+		684A7AB31362FDE000B4F68C /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684A7AB21362FDE000B4F68C /* CoreGraphics.framework */; };
+		684A7AFF1362FFF500B4F68C /* MXText.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7AFE1362FFF500B4F68C /* MXText.m */; };
+		684A7B071363009C00B4F68C /* MXCG.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7B061363009C00B4F68C /* MXCG.m */; };
+		684A7B9C13630B1400B4F68C /* CALayer+MX.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7B9B13630B1400B4F68C /* CALayer+MX.m */; };
+		684A7C581363261F00B4F68C /* MXImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7C571363261F00B4F68C /* MXImageLayer.m */; };
+		684A7CD013632EE600B4F68C /* MXHIDController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7CCF13632EE600B4F68C /* MXHIDController.m */; };
+		684A7CDB13632F3900B4F68C /* IOKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684A7CDA13632F3900B4F68C /* IOKit.framework */; };
+		684A7D0C1363307C00B4F68C /* GraphicsServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 684A7D0B1363307C00B4F68C /* GraphicsServices.framework */; };
+		684A7E0513634A4300B4F68C /* MXUIController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7E0413634A4300B4F68C /* MXUIController.m */; };
+		684A7E0913634AC900B4F68C /* MXController+Internal.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7E0813634AC900B4F68C /* MXController+Internal.m */; };
+		684A7E1913634B7B00B4F68C /* MXController+EventHandling.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7E1813634B7B00B4F68C /* MXController+EventHandling.m */; };
+		684A7EF61363514200B4F68C /* MXIcon.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A7EF51363514200B4F68C /* MXIcon.m */; };
+		684A80141363638000B4F68C /* MXApplication.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A80131363638000B4F68C /* MXApplication.m */; };
+		684A8017136363A600B4F68C /* MXLaunchdUtilities.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A8016136363A600B4F68C /* MXLaunchdUtilities.m */; };
+		684A801A136363B000B4F68C /* MXBundle.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A8019136363B000B4F68C /* MXBundle.m */; };
+		684A80381363652100B4F68C /* SBSpringBoardServicesMachServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A8025136363D900B4F68C /* SBSpringBoardServicesMachServer.m */; };
+		684A80471363658100B4F68C /* MXApplicationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 684A80461363658100B4F68C /* MXApplicationController.m */; };
+		68524A001366069B007BE5B3 /* MXIconImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 685249FF1366069B007BE5B3 /* MXIconImage.m */; };
+		6857266B136370B700BEEA8B /* MXWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857266A136370B700BEEA8B /* MXWindow.m */; };
+		6857270B1363885A00BEEA8B /* IOSurface.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6857270A1363885A00BEEA8B /* IOSurface.framework */; };
+		685727721363937800BEEA8B /* ImageIO.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 685727711363937800BEEA8B /* ImageIO.framework */; };
+		68572940136445FE00BEEA8B /* MXControl.m in Sources */ = {isa = PBXBuildFile; fileRef = 6857293F136445FE00BEEA8B /* MXControl.m */; };
+		68572A0E1364508D00BEEA8B /* MXButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572A0D1364508D00BEEA8B /* MXButton.m */; };
+		68572A881364624200BEEA8B /* MXPane.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572A871364624200BEEA8B /* MXPane.m */; };
+		68572A97136463AF00BEEA8B /* MXTaskbar.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572A96136463AF00BEEA8B /* MXTaskbar.m */; };
+		68572AA01364646D00BEEA8B /* MXTaskbarItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572A9F1364646D00BEEA8B /* MXTaskbarItem.m */; };
+		68572B3A13646C2900BEEA8B /* MXTaskbarIconItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572B3913646C2900BEEA8B /* MXTaskbarIconItem.m */; };
+		68572BA1136474C200BEEA8B /* MXPaneManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572BA0136474C200BEEA8B /* MXPaneManager.m */; };
+		68572BE91364797B00BEEA8B /* MXImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572BE81364797B00BEEA8B /* MXImage.m */; };
+		68572C5A1364930C00BEEA8B /* MXPanePreview.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572C591364930C00BEEA8B /* MXPanePreview.m */; };
+		68572DBB1364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572DBA1364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.m */; };
+		68572E311364C08F00BEEA8B /* MXRenderLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572E301364C08F00BEEA8B /* MXRenderLayer.m */; };
+		68572E7C1364C3F600BEEA8B /* MXUIKitSharedImageServer.mm in Sources */ = {isa = PBXBuildFile; fileRef = 68572E7B1364C3F600BEEA8B /* MXUIKitSharedImageServer.mm */; };
+		68572F321364D5F800BEEA8B /* MXLayerHost.m in Sources */ = {isa = PBXBuildFile; fileRef = 68572F311364D5F800BEEA8B /* MXLayerHost.m */; };
+		685730F91364F9B700BEEA8B /* MXWindowButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 685730F81364F9B700BEEA8B /* MXWindowButton.m */; };
+		685732181365710500BEEA8B /* MXPlatformController.m in Sources */ = {isa = PBXBuildFile; fileRef = 685732171365710500BEEA8B /* MXPlatformController.m */; };
+		685956531384078E007750FD /* MXPortCache.m in Sources */ = {isa = PBXBuildFile; fileRef = 685956521384078E007750FD /* MXPortCache.m */; };
+		685956A513841306007750FD /* MXCloseCross.m in Sources */ = {isa = PBXBuildFile; fileRef = 685956A413841306007750FD /* MXCloseCross.m */; };
+		68595778138421BC007750FD /* MXPaneManager+Expose.m in Sources */ = {isa = PBXBuildFile; fileRef = 68595777138421BC007750FD /* MXPaneManager+Expose.m */; };
+		6859587B13843A0F007750FD /* MXFolder.m in Sources */ = {isa = PBXBuildFile; fileRef = 6859587A13843A0F007750FD /* MXFolder.m */; };
+		68685DCC133DF4A600AFEED6 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 68685DCB133DF4A600AFEED6 /* Foundation.framework */; };
+		686BF9731389119E004B6DF1 /* UIKIT in Resources */ = {isa = PBXBuildFile; fileRef = 686BF9721389119E004B6DF1 /* UIKIT */; };
+		686BF98513891690004B6DF1 /* CPMIGProbing.m in Sources */ = {isa = PBXBuildFile; fileRef = 686BF98413891690004B6DF1 /* CPMIGProbing.m */; };
+		686BFADB13892DB9004B6DF1 /* UIKIT-RESUME-TRACE in Resources */ = {isa = PBXBuildFile; fileRef = 686BFADA13892DB9004B6DF1 /* UIKIT-RESUME-TRACE */; };
+		686BFAE013892FB8004B6DF1 /* MXUIStatusBarServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 686BFADF13892FB8004B6DF1 /* MXUIStatusBarServer.m */; };
+		687B8BE1136DB6DE009D1D64 /* MXDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 687B8BE0136DB6DE009D1D64 /* MXDevice.m */; };
+		687B8C17136DCABF009D1D64 /* NSDictionary+BOOL.m in Sources */ = {isa = PBXBuildFile; fileRef = 687B8C16136DCABF009D1D64 /* NSDictionary+BOOL.m */; };
+		687B8D78136DF63C009D1D64 /* MXLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 687B8D77136DF63C009D1D64 /* MXLog.m */; };
+		687B8FA0136E499D009D1D64 /* CHANGELOG in Resources */ = {isa = PBXBuildFile; fileRef = 687B8F9F136E499D009D1D64 /* CHANGELOG */; };
+		687B9FA11381BEEC00880185 /* MXExposeLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 687B9FA01381BEEC00880185 /* MXExposeLayer.m */; };
+		688D039413A1078C00AEC2BB /* MXIPCSupport.m in Sources */ = {isa = PBXBuildFile; fileRef = 688D039313A1078C00AEC2BB /* MXIPCSupport.m */; };
+		68954151136ED94A00968296 /* MXHostWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 68954150136ED94A00968296 /* MXHostWindow.m */; };
+		68954273136F10D000968296 /* MXWindow+Drawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 68954272136F10D000968296 /* MXWindow+Drawing.m */; };
+		68954296136F12E600968296 /* MXWindow+Frame.m in Sources */ = {isa = PBXBuildFile; fileRef = 68954295136F12E600968296 /* MXWindow+Frame.m */; };
+		6899232113A15DB500DFB044 /* IOMobileFramebuffer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 6899232013A15DB500DFB044 /* IOMobileFramebuffer.framework */; };
+		689B847C137BCA9400D4A160 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 689B847B137BCA9400D4A160 /* CoreTelephony.framework */; };
+		689B8517137BDFC700D4A160 /* MXBasicAnimation.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8516137BDFC700D4A160 /* MXBasicAnimation.m */; };
+		689B86BE137E7BEC00D4A160 /* MXTableSectionHeader.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B86BD137E7BEC00D4A160 /* MXTableSectionHeader.m */; };
+		689B8765137E84B600D4A160 /* MXLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8764137E84B600D4A160 /* MXLayer.m */; };
+		689B8852137E91F100D4A160 /* MXDashboardLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8851137E91F100D4A160 /* MXDashboardLayer.m */; };
+		689B88ED137E979D00D4A160 /* MXScreenCapture.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B88EC137E979D00D4A160 /* MXScreenCapture.m */; };
+		689B89B2137EAAA300D4A160 /* MXDashboardController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B89B1137EAAA300D4A160 /* MXDashboardController.m */; };
+		689B8D12137EEFD800D4A160 /* MXQuartzWindowServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8D11137EEFD800D4A160 /* MXQuartzWindowServer.m */; };
+		689B8D55137EF4B800D4A160 /* MXTesting.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8D54137EF4B800D4A160 /* MXTesting.m */; };
+		689B8EB9137F12CB00D4A160 /* MXSleepController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8EB8137F12CB00D4A160 /* MXSleepController.m */; };
+		689B8EF0137F1CA300D4A160 /* MXPreferencesWindowController.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B8EEF137F1CA300D4A160 /* MXPreferencesWindowController.m */; };
+		689B9049137FC69C00D4A160 /* MXSBInitialization.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B9048137FC69C00D4A160 /* MXSBInitialization.m */; };
+		689B9130137FE5D200D4A160 /* MXClippedImageLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 689B912F137FE5D200D4A160 /* MXClippedImageLayer.m */; };
+		68B1729B138EB42E007F7431 /* IOFlashStorage.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B1729A138EB42E007F7431 /* IOFlashStorage.m */; };
+		68B20A55136AE423000793AE /* MXUIDrawing.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B20A54136AE423000793AE /* MXUIDrawing.m */; };
+		68B20C7C136B9305000793AE /* MXIOTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B20C7B136B9305000793AE /* MXIOTools.m */; };
+		68B20D9F136C66A2000793AE /* MXProcess.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B20D9E136C66A2000793AE /* MXProcess.m */; };
+		68B20EDA136CA0B8000793AE /* POSIXTask.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B20ED9136CA0B8000793AE /* POSIXTask.m */; };
+		68B9F9271373404D00B912F6 /* MXCheckbox.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B9F9261373404D00B912F6 /* MXCheckbox.m */; };
+		68B9F9841373461700B912F6 /* MXTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B9F9831373461700B912F6 /* MXTableViewCell.m */; };
+		68B9F9871373461F00B912F6 /* MXTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 68B9F9861373461F00B912F6 /* MXTableView.m */; };
+		68CDAF521395AD6800CB09E7 /* SpringBoardServicesServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CDAF511395AD6800CB09E7 /* SpringBoardServicesServer.m */; };
+		68CDB0B3139646A800CB09E7 /* MXUIStatusBarMiGServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CDB0B2139646A800CB09E7 /* MXUIStatusBarMiGServer.m */; };
+		68CF69BB1386B56800B77AEF /* libbsm.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 68CF69BA1386B56800B77AEF /* libbsm.dylib */; };
+		68CF6C13138707DE00B77AEF /* MXRenderManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF6C12138707DE00B77AEF /* MXRenderManager.m */; };
+		68CF6C2D13870AE600B77AEF /* MXRemoteProcedureCalls.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF6C2C13870AE600B77AEF /* MXRemoteProcedureCalls.m */; };
+		68CF6E6E1387E74200B77AEF /* CPMIGServerSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF6E6D1387E74200B77AEF /* CPMIGServerSource.m */; };
+		68CF70381388265A00B77AEF /* MXApplicationStateServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF70371388265A00B77AEF /* MXApplicationStateServices.m */; };
+		68CF704E13882D5B00B77AEF /* MXApplication+PerAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		016A0B4C148A8446007E6F5A /* ImageLoaderMachO.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageLoaderMachO.mm; sourceTree = "<group>"; };
+		016A0B4D148A8446007E6F5A /* ImageLoaderMachO.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageLoaderMachO.h; sourceTree = "<group>"; };
+		017C7FAA14AE742F003F175D /* legacyUiSharedImageServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = legacyUiSharedImageServer.h; sourceTree = "<group>"; };
+		017C7FAB14AE742F003F175D /* legacyUiSharedImageServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = legacyUiSharedImageServer.m; sourceTree = "<group>"; };
+		01936FA714995AB4001B31EC /* LEGACY_MT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEGACY_MT; sourceTree = "<group>"; };
+		01C17E2514810EF500316325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.internal.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		01C17E311481236C00316325 /* uiKitProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiKitProxy.h; sourceTree = "<group>"; };
+		01C17E321481236C00316325 /* uiKitProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uiKitProxy.m; sourceTree = "<group>"; };
+		1D6058910D05DD3D006BFB54 /* MobileX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MobileX; sourceTree = BUILT_PRODUCTS_DIR; };
+		29B97316FDCFA39411CA2CEA /* MobileX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileX.m; sourceTree = "<group>"; };
+		680D63AC139ADF3A00B30370 /* MobileXRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileXRPC.h; sourceTree = "<group>"; };
+		680D63AD139ADF3A00B30370 /* MXRPCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRPCClient.m; sourceTree = "<group>"; };
+		680D63AE139ADF3A00B30370 /* MXRPCMigServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRPCMigServer.m; sourceTree = "<group>"; };
+		6810FB7F1200AB1700B3E2C3 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6814E86513845D3C005205E5 /* MXFolderIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXFolderIcon.h; sourceTree = "<group>"; };
+		6814E86613845D3C005205E5 /* MXFolderIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXFolderIcon.m; sourceTree = "<group>"; };
+		6814E8DB138462E8005205E5 /* MXPaneManager+Reveal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXPaneManager+Reveal.h"; sourceTree = "<group>"; };
+		6814E8DC138462E8005205E5 /* MXPaneManager+Reveal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXPaneManager+Reveal.m"; sourceTree = "<group>"; };
+		68232E63136F8A2E005AAA65 /* MXGestureRecognizer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXGestureRecognizer.h; sourceTree = "<group>"; };
+		68232E64136F8A2E005AAA65 /* MXGestureRecognizer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXGestureRecognizer.m; sourceTree = "<group>"; };
+		68232E69136F8B6F005AAA65 /* MXMultitouchHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMultitouchHandler.h; sourceTree = "<group>"; };
+		68232E6A136F8B6F005AAA65 /* MXMultitouchHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMultitouchHandler.m; sourceTree = "<group>"; };
+		68232FBC1371C79E005AAA65 /* MXSettingsController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSettingsController.h; sourceTree = "<group>"; };
+		68232FBD1371C79E005AAA65 /* MXSettingsController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSettingsController.m; sourceTree = "<group>"; };
+		6823311F1372FB10005AAA65 /* MXApplicationIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXApplicationIcon.h; sourceTree = "<group>"; };
+		682331201372FB10005AAA65 /* MXApplicationIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXApplicationIcon.m; sourceTree = "<group>"; };
+		682331331372FB85005AAA65 /* MXIconController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIconController.h; sourceTree = "<group>"; };
+		682331341372FB85005AAA65 /* MXIconController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIconController.m; sourceTree = "<group>"; };
+		682331351372FB85005AAA65 /* MXIconListLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIconListLayer.h; sourceTree = "<group>"; };
+		682331361372FB85005AAA65 /* MXIconListLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIconListLayer.m; sourceTree = "<group>"; };
+		682331371372FB85005AAA65 /* MXIconScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIconScrollLayer.h; sourceTree = "<group>"; };
+		682331381372FB85005AAA65 /* MXIconScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIconScrollLayer.m; sourceTree = "<group>"; };
+		682331401372FBB6005AAA65 /* MXDesktopController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDesktopController.h; sourceTree = "<group>"; };
+		682331411372FBB6005AAA65 /* MXDesktopController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDesktopController.m; sourceTree = "<group>"; };
+		6823314E1372FC0B005AAA65 /* MXWallpaperLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXWallpaperLayer.h; sourceTree = "<group>"; };
+		6823314F1372FC0B005AAA65 /* MXWallpaperLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXWallpaperLayer.m; sourceTree = "<group>"; };
+		682331531372FC2A005AAA65 /* MXDesktopLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDesktopLayer.h; sourceTree = "<group>"; };
+		682331541372FC2A005AAA65 /* MXDesktopLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDesktopLayer.m; sourceTree = "<group>"; };
+		682331701372FD47005AAA65 /* MXScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXScrollLayer.h; sourceTree = "<group>"; };
+		682331711372FD47005AAA65 /* MXScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXScrollLayer.m; sourceTree = "<group>"; };
+		683D4E0713753F7E0044480D /* MXBoundScrollLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXBoundScrollLayer.h; sourceTree = "<group>"; };
+		683D4E0813753F7E0044480D /* MXBoundScrollLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXBoundScrollLayer.m; sourceTree = "<group>"; };
+		683D503413756A050044480D /* MXScroller.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXScroller.h; sourceTree = "<group>"; };
+		683D503513756A050044480D /* MXScroller.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXScroller.m; sourceTree = "<group>"; };
+		683D55EA1376164C0044480D /* CARenderContext.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARenderContext.h; sourceTree = "<group>"; };
+		683D55F11376190D0044480D /* CARenderServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARenderServer.h; sourceTree = "<group>"; };
+		683D55F413761A380044480D /* CGPrivateMethods.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CGPrivateMethods.h; sourceTree = "<group>"; };
+		683D562113761B7D0044480D /* CARenderSharedImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CARenderSharedImage.h; sourceTree = "<group>"; };
+		683D585F1376BF130044480D /* MXFont.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXFont.h; sourceTree = "<group>"; };
+		683D58601376BF130044480D /* MXFont.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXFont.m; sourceTree = "<group>"; };
+		683D59F913773B350044480D /* MXMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMenu.h; sourceTree = "<group>"; };
+		683D59FA13773B350044480D /* MXMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMenu.m; sourceTree = "<group>"; };
+		683D5A5013773F470044480D /* MXMenuItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMenuItem.h; sourceTree = "<group>"; };
+		683D5A5113773F470044480D /* MXMenuItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMenuItem.m; sourceTree = "<group>"; };
+		684A7A6F1362F9C000B4F68C /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
+		684A7A881362FA9E00B4F68C /* MXController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXController.h; sourceTree = "<group>"; };
+		684A7A891362FA9E00B4F68C /* MXController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXController.m; sourceTree = "<group>"; };
+		684A7A911362FBCA00B4F68C /* MXMainLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXMainLayer.h; sourceTree = "<group>"; };
+		684A7A921362FBCA00B4F68C /* MXMainLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXMainLayer.m; sourceTree = "<group>"; };
+		684A7AA01362FD6A00B4F68C /* MXColors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXColors.h; sourceTree = "<group>"; };
+		684A7AA11362FD6A00B4F68C /* MXColors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXColors.m; sourceTree = "<group>"; };
+		684A7AB21362FDE000B4F68C /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		684A7AFD1362FFF500B4F68C /* MXText.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXText.h; sourceTree = "<group>"; };
+		684A7AFE1362FFF500B4F68C /* MXText.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXText.m; sourceTree = "<group>"; };
+		684A7B051363009C00B4F68C /* MXCG.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCG.h; sourceTree = "<group>"; };
+		684A7B061363009C00B4F68C /* MXCG.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCG.m; sourceTree = "<group>"; };
+		684A7B9A13630B1400B4F68C /* CALayer+MX.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "CALayer+MX.h"; sourceTree = "<group>"; };
+		684A7B9B13630B1400B4F68C /* CALayer+MX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "CALayer+MX.m"; sourceTree = "<group>"; };
+		684A7C561363261F00B4F68C /* MXImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXImageLayer.h; sourceTree = "<group>"; };
+		684A7C571363261F00B4F68C /* MXImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXImageLayer.m; sourceTree = "<group>"; };
+		684A7CCE13632EE600B4F68C /* MXHIDController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXHIDController.h; sourceTree = "<group>"; };
+		684A7CCF13632EE600B4F68C /* MXHIDController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXHIDController.m; sourceTree = "<group>"; };
+		684A7CDA13632F3900B4F68C /* IOKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOKit.framework; path = System/Library/Frameworks/IOKit.framework; sourceTree = SDKROOT; };
+		684A7D0B1363307C00B4F68C /* GraphicsServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GraphicsServices.framework; path = System/Library/PrivateFrameworks/GraphicsServices.framework; sourceTree = SDKROOT; };
+		684A7D961363470100B4F68C /* MTTouchType.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MTTouchType.h; sourceTree = "<group>"; };
+		684A7E0313634A4300B4F68C /* MXUIController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUIController.h; sourceTree = "<group>"; };
+		684A7E0413634A4300B4F68C /* MXUIController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUIController.m; sourceTree = "<group>"; };
+		684A7E0713634AC900B4F68C /* MXController+Internal.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXController+Internal.h"; sourceTree = "<group>"; };
+		684A7E0813634AC900B4F68C /* MXController+Internal.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXController+Internal.m"; sourceTree = "<group>"; };
+		684A7E1713634B7B00B4F68C /* MXController+EventHandling.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXController+EventHandling.h"; sourceTree = "<group>"; };
+		684A7E1813634B7B00B4F68C /* MXController+EventHandling.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXController+EventHandling.m"; sourceTree = "<group>"; };
+		684A7EF41363514200B4F68C /* MXIcon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIcon.h; sourceTree = "<group>"; };
+		684A7EF51363514200B4F68C /* MXIcon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIcon.m; sourceTree = "<group>"; };
+		684A7F601363570600B4F68C /* MXKit.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXKit.h; sourceTree = "<group>"; };
+		684A80121363638000B4F68C /* MXApplication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXApplication.h; sourceTree = "<group>"; };
+		684A80131363638000B4F68C /* MXApplication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXApplication.m; sourceTree = "<group>"; };
+		684A8015136363A600B4F68C /* MXLaunchdUtilities.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXLaunchdUtilities.h; sourceTree = "<group>"; };
+		684A8016136363A600B4F68C /* MXLaunchdUtilities.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLaunchdUtilities.m; sourceTree = "<group>"; };
+		684A8018136363B000B4F68C /* MXBundle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXBundle.h; sourceTree = "<group>"; };
+		684A8019136363B000B4F68C /* MXBundle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXBundle.m; sourceTree = "<group>"; };
+		684A801D136363D900B4F68C /* BootstrapServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BootstrapServices.h; sourceTree = "<group>"; };
+		684A8024136363D900B4F68C /* SBSpringBoardServicesMachServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SBSpringBoardServicesMachServer.h; sourceTree = "<group>"; };
+		684A8025136363D900B4F68C /* SBSpringBoardServicesMachServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SBSpringBoardServicesMachServer.m; sourceTree = "<group>"; };
+		684A80451363658100B4F68C /* MXApplicationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXApplicationController.h; sourceTree = "<group>"; };
+		684A80461363658100B4F68C /* MXApplicationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXApplicationController.m; sourceTree = "<group>"; };
+		685249FE1366069B007BE5B3 /* MXIconImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIconImage.h; sourceTree = "<group>"; };
+		685249FF1366069B007BE5B3 /* MXIconImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIconImage.m; sourceTree = "<group>"; };
+		68572669136370B700BEEA8B /* MXWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXWindow.h; sourceTree = "<group>"; };
+		6857266A136370B700BEEA8B /* MXWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXWindow.m; sourceTree = "<group>"; };
+		6857270A1363885A00BEEA8B /* IOSurface.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOSurface.framework; path = System/Library/PrivateFrameworks/IOSurface.framework; sourceTree = SDKROOT; };
+		685727711363937800BEEA8B /* ImageIO.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ImageIO.framework; path = System/Library/Frameworks/ImageIO.framework; sourceTree = SDKROOT; };
+		6857293E136445FE00BEEA8B /* MXControl.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXControl.h; sourceTree = "<group>"; };
+		6857293F136445FE00BEEA8B /* MXControl.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXControl.m; sourceTree = "<group>"; };
+		68572A0C1364508D00BEEA8B /* MXButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXButton.h; sourceTree = "<group>"; };
+		68572A0D1364508D00BEEA8B /* MXButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXButton.m; sourceTree = "<group>"; };
+		68572A861364624200BEEA8B /* MXPane.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPane.h; sourceTree = "<group>"; };
+		68572A871364624200BEEA8B /* MXPane.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPane.m; sourceTree = "<group>"; };
+		68572A95136463AF00BEEA8B /* MXTaskbar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTaskbar.h; sourceTree = "<group>"; };
+		68572A96136463AF00BEEA8B /* MXTaskbar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTaskbar.m; sourceTree = "<group>"; };
+		68572A9E1364646D00BEEA8B /* MXTaskbarItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTaskbarItem.h; sourceTree = "<group>"; };
+		68572A9F1364646D00BEEA8B /* MXTaskbarItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTaskbarItem.m; sourceTree = "<group>"; };
+		68572B3813646C2900BEEA8B /* MXTaskbarIconItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTaskbarIconItem.h; sourceTree = "<group>"; };
+		68572B3913646C2900BEEA8B /* MXTaskbarIconItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTaskbarIconItem.m; sourceTree = "<group>"; };
+		68572B9F136474C200BEEA8B /* MXPaneManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPaneManager.h; sourceTree = "<group>"; };
+		68572BA0136474C200BEEA8B /* MXPaneManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPaneManager.m; sourceTree = "<group>"; };
+		68572BE71364797B00BEEA8B /* MXImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXImage.h; sourceTree = "<group>"; };
+		68572BE81364797B00BEEA8B /* MXImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXImage.m; sourceTree = "<group>"; };
+		68572C581364930C00BEEA8B /* MXPanePreview.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPanePreview.h; sourceTree = "<group>"; };
+		68572C591364930C00BEEA8B /* MXPanePreview.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPanePreview.m; sourceTree = "<group>"; };
+		68572DB91364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTaskbarPanePreviewItem.h; sourceTree = "<group>"; };
+		68572DBA1364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTaskbarPanePreviewItem.m; sourceTree = "<group>"; };
+		68572E2F1364C08F00BEEA8B /* MXRenderLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRenderLayer.h; sourceTree = "<group>"; };
+		68572E301364C08F00BEEA8B /* MXRenderLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRenderLayer.m; sourceTree = "<group>"; };
+		68572E7A1364C3F600BEEA8B /* MXUIKitSharedImageServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUIKitSharedImageServer.h; sourceTree = "<group>"; };
+		68572E7B1364C3F600BEEA8B /* MXUIKitSharedImageServer.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = MXUIKitSharedImageServer.mm; sourceTree = "<group>"; };
+		68572F301364D5F800BEEA8B /* MXLayerHost.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXLayerHost.h; sourceTree = "<group>"; };
+		68572F311364D5F800BEEA8B /* MXLayerHost.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLayerHost.m; sourceTree = "<group>"; };
+		685730F71364F9B700BEEA8B /* MXWindowButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXWindowButton.h; sourceTree = "<group>"; };
+		685730F81364F9B700BEEA8B /* MXWindowButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXWindowButton.m; sourceTree = "<group>"; };
+		685732161365710500BEEA8B /* MXPlatformController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPlatformController.h; sourceTree = "<group>"; };
+		685732171365710500BEEA8B /* MXPlatformController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPlatformController.m; sourceTree = "<group>"; };
+		685956511384078E007750FD /* MXPortCache.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPortCache.h; sourceTree = "<group>"; };
+		685956521384078E007750FD /* MXPortCache.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPortCache.m; sourceTree = "<group>"; };
+		685956A313841306007750FD /* MXCloseCross.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCloseCross.h; sourceTree = "<group>"; };
+		685956A413841306007750FD /* MXCloseCross.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCloseCross.m; sourceTree = "<group>"; };
+		68595776138421BC007750FD /* MXPaneManager+Expose.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXPaneManager+Expose.h"; sourceTree = "<group>"; };
+		68595777138421BC007750FD /* MXPaneManager+Expose.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXPaneManager+Expose.m"; sourceTree = "<group>"; };
+		6859587913843A0F007750FD /* MXFolder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXFolder.h; sourceTree = "<group>"; };
+		6859587A13843A0F007750FD /* MXFolder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXFolder.m; sourceTree = "<group>"; };
+		68685DCB133DF4A600AFEED6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		686BF9721389119E004B6DF1 /* UIKIT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = UIKIT; sourceTree = "<group>"; };
+		686BF98313891690004B6DF1 /* CPMIGProbing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMIGProbing.h; sourceTree = "<group>"; };
+		686BF98413891690004B6DF1 /* CPMIGProbing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMIGProbing.m; sourceTree = "<group>"; };
+		686BFADA13892DB9004B6DF1 /* UIKIT-RESUME-TRACE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "UIKIT-RESUME-TRACE"; sourceTree = "<group>"; };
+		686BFADE13892FB8004B6DF1 /* MXUIStatusBarServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUIStatusBarServer.h; sourceTree = "<group>"; };
+		686BFADF13892FB8004B6DF1 /* MXUIStatusBarServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUIStatusBarServer.m; sourceTree = "<group>"; };
+		686BFAE113892FFC004B6DF1 /* MXUIStatusBarServerCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUIStatusBarServerCommon.h; sourceTree = "<group>"; };
+		687B8BDF136DB6DE009D1D64 /* MXDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDevice.h; sourceTree = "<group>"; };
+		687B8BE0136DB6DE009D1D64 /* MXDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDevice.m; sourceTree = "<group>"; };
+		687B8C15136DCABF009D1D64 /* NSDictionary+BOOL.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+BOOL.h"; sourceTree = "<group>"; };
+		687B8C16136DCABF009D1D64 /* NSDictionary+BOOL.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+BOOL.m"; sourceTree = "<group>"; };
+		687B8D1D136DEB7A009D1D64 /* MXLoggingMacros.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXLoggingMacros.h; sourceTree = "<group>"; };
+		687B8D77136DF63C009D1D64 /* MXLog.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLog.m; sourceTree = "<group>"; };
+		687B8F9F136E499D009D1D64 /* CHANGELOG */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = CHANGELOG; sourceTree = "<group>"; };
+		687B9F9F1381BEEC00880185 /* MXExposeLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXExposeLayer.h; sourceTree = "<group>"; };
+		687B9FA01381BEEC00880185 /* MXExposeLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXExposeLayer.m; sourceTree = "<group>"; };
+		688D039213A1078C00AEC2BB /* MXIPCSupport.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIPCSupport.h; sourceTree = "<group>"; };
+		688D039313A1078C00AEC2BB /* MXIPCSupport.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIPCSupport.m; sourceTree = "<group>"; };
+		6895414F136ED94A00968296 /* MXHostWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXHostWindow.h; sourceTree = "<group>"; };
+		68954150136ED94A00968296 /* MXHostWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXHostWindow.m; sourceTree = "<group>"; };
+		68954271136F10D000968296 /* MXWindow+Drawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXWindow+Drawing.h"; sourceTree = "<group>"; };
+		68954272136F10D000968296 /* MXWindow+Drawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXWindow+Drawing.m"; sourceTree = "<group>"; };
+		68954294136F12E600968296 /* MXWindow+Frame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXWindow+Frame.h"; sourceTree = "<group>"; };
+		68954295136F12E600968296 /* MXWindow+Frame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXWindow+Frame.m"; sourceTree = "<group>"; };
+		6899232013A15DB500DFB044 /* IOMobileFramebuffer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = IOMobileFramebuffer.framework; path = System/Library/PrivateFrameworks/IOMobileFramebuffer.framework; sourceTree = SDKROOT; };
+		689B845F137BC81900D4A160 /* CoreTelephonyPriv.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreTelephonyPriv.h; sourceTree = "<group>"; };
+		689B847B137BCA9400D4A160 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		689B849E137BCB7900D4A160 /* CTServerConnection.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTServerConnection.h; sourceTree = "<group>"; };
+		689B849F137BCBA200D4A160 /* CTRegistration.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTRegistration.h; sourceTree = "<group>"; };
+		689B84A0137BCBD800D4A160 /* CTTelephonyCenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTTelephonyCenter.h; sourceTree = "<group>"; };
+		689B8515137BDFC700D4A160 /* MXBasicAnimation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXBasicAnimation.h; sourceTree = "<group>"; };
+		689B8516137BDFC700D4A160 /* MXBasicAnimation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXBasicAnimation.m; sourceTree = "<group>"; };
+		689B86BC137E7BEC00D4A160 /* MXTableSectionHeader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTableSectionHeader.h; sourceTree = "<group>"; };
+		689B86BD137E7BEC00D4A160 /* MXTableSectionHeader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTableSectionHeader.m; sourceTree = "<group>"; };
+		689B8763137E84B600D4A160 /* MXLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXLayer.h; sourceTree = "<group>"; };
+		689B8764137E84B600D4A160 /* MXLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXLayer.m; sourceTree = "<group>"; };
+		689B8850137E91F100D4A160 /* MXDashboardLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDashboardLayer.h; sourceTree = "<group>"; };
+		689B8851137E91F100D4A160 /* MXDashboardLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDashboardLayer.m; sourceTree = "<group>"; };
+		689B88EB137E979D00D4A160 /* MXScreenCapture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXScreenCapture.h; sourceTree = "<group>"; };
+		689B88EC137E979D00D4A160 /* MXScreenCapture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXScreenCapture.m; sourceTree = "<group>"; };
+		689B89B0137EAAA300D4A160 /* MXDashboardController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXDashboardController.h; sourceTree = "<group>"; };
+		689B89B1137EAAA300D4A160 /* MXDashboardController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXDashboardController.m; sourceTree = "<group>"; };
+		689B8A0B137EAE1A00D4A160 /* MXHardwareButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXHardwareButton.h; sourceTree = "<group>"; };
+		689B8D10137EEFD800D4A160 /* MXQuartzWindowServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXQuartzWindowServer.h; sourceTree = "<group>"; };
+		689B8D11137EEFD800D4A160 /* MXQuartzWindowServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXQuartzWindowServer.m; sourceTree = "<group>"; };
+		689B8D53137EF4B800D4A160 /* MXTesting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTesting.h; sourceTree = "<group>"; };
+		689B8D54137EF4B800D4A160 /* MXTesting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTesting.m; sourceTree = "<group>"; };
+		689B8DE3137EF8F000D4A160 /* CTCall.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTCall.h; sourceTree = "<group>"; };
+		689B8EB7137F12CB00D4A160 /* MXSleepController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSleepController.h; sourceTree = "<group>"; };
+		689B8EB8137F12CB00D4A160 /* MXSleepController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSleepController.m; sourceTree = "<group>"; };
+		689B8EEE137F1CA300D4A160 /* MXPreferencesWindowController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXPreferencesWindowController.h; sourceTree = "<group>"; };
+		689B8EEF137F1CA300D4A160 /* MXPreferencesWindowController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXPreferencesWindowController.m; sourceTree = "<group>"; };
+		689B9047137FC69C00D4A160 /* MXSBInitialization.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXSBInitialization.h; sourceTree = "<group>"; };
+		689B9048137FC69C00D4A160 /* MXSBInitialization.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXSBInitialization.m; sourceTree = "<group>"; };
+		689B912E137FE5D200D4A160 /* MXClippedImageLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXClippedImageLayer.h; sourceTree = "<group>"; };
+		689B912F137FE5D200D4A160 /* MXClippedImageLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXClippedImageLayer.m; sourceTree = "<group>"; };
+		68B1727D138EABE2007F7431 /* libbsm.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = libbsm.h; sourceTree = "<group>"; };
+		68B17299138EB42E007F7431 /* IOFlashStorage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IOFlashStorage.h; sourceTree = "<group>"; };
+		68B1729A138EB42E007F7431 /* IOFlashStorage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IOFlashStorage.m; sourceTree = "<group>"; };
+		68B20A53136AE423000793AE /* MXUIDrawing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXUIDrawing.h; sourceTree = "<group>"; };
+		68B20A54136AE423000793AE /* MXUIDrawing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUIDrawing.m; sourceTree = "<group>"; };
+		68B20C7A136B9305000793AE /* MXIOTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXIOTools.h; sourceTree = "<group>"; };
+		68B20C7B136B9305000793AE /* MXIOTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXIOTools.m; sourceTree = "<group>"; };
+		68B20CC3136B9F0B000793AE /* SpringBoardServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SpringBoardServices.framework; path = System/Library/PrivateFrameworks/SpringBoardServices.framework; sourceTree = SDKROOT; };
+		68B20CDD136BA1B1000793AE /* SpringBoardServices_Common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardServices_Common.h; sourceTree = "<group>"; };
+		68B20D9D136C66A2000793AE /* MXProcess.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXProcess.h; sourceTree = "<group>"; };
+		68B20D9E136C66A2000793AE /* MXProcess.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXProcess.m; sourceTree = "<group>"; };
+		68B20ED8136CA0B7000793AE /* POSIXTask.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = POSIXTask.h; sourceTree = "<group>"; };
+		68B20ED9136CA0B8000793AE /* POSIXTask.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = POSIXTask.m; sourceTree = "<group>"; };
+		68B9F9251373404D00B912F6 /* MXCheckbox.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXCheckbox.h; sourceTree = "<group>"; };
+		68B9F9261373404D00B912F6 /* MXCheckbox.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXCheckbox.m; sourceTree = "<group>"; };
+		68B9F9821373461700B912F6 /* MXTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTableViewCell.h; sourceTree = "<group>"; };
+		68B9F9831373461700B912F6 /* MXTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTableViewCell.m; sourceTree = "<group>"; };
+		68B9F9851373461F00B912F6 /* MXTableView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXTableView.h; sourceTree = "<group>"; };
+		68B9F9861373461F00B912F6 /* MXTableView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXTableView.m; sourceTree = "<group>"; };
+		68CDAF511395AD6800CB09E7 /* SpringBoardServicesServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SpringBoardServicesServer.m; sourceTree = "<group>"; };
+		68CDAF531395AD7E00CB09E7 /* SpringBoardServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SpringBoardServices.h; sourceTree = "<group>"; };
+		68CDB0B2139646A800CB09E7 /* MXUIStatusBarMiGServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXUIStatusBarMiGServer.m; sourceTree = "<group>"; };
+		68CF69BA1386B56800B77AEF /* libbsm.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libbsm.dylib; path = usr/lib/libbsm.dylib; sourceTree = SDKROOT; };
+		68CF6C11138707DE00B77AEF /* MXRenderManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRenderManager.h; sourceTree = "<group>"; };
+		68CF6C12138707DE00B77AEF /* MXRenderManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRenderManager.m; sourceTree = "<group>"; };
+		68CF6C2B13870AE600B77AEF /* MXRemoteProcedureCalls.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRemoteProcedureCalls.h; sourceTree = "<group>"; };
+		68CF6C2C13870AE600B77AEF /* MXRemoteProcedureCalls.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRemoteProcedureCalls.m; sourceTree = "<group>"; };
+		68CF6D231387C21300B77AEF /* MXRPCCommon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXRPCCommon.h; sourceTree = "<group>"; };
+		68CF6E6C1387E74200B77AEF /* CPMIGServerSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPMIGServerSource.h; sourceTree = "<group>"; };
+		68CF6E6D1387E74200B77AEF /* CPMIGServerSource.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPMIGServerSource.m; sourceTree = "<group>"; };
+		68CF70361388265A00B77AEF /* MXApplicationStateServices.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXApplicationStateServices.h; sourceTree = "<group>"; };
+		68CF70371388265A00B77AEF /* MXApplicationStateServices.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXApplicationStateServices.m; sourceTree = "<group>"; };
+		68CF704C13882D5B00B77AEF /* MXApplication+PerAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXApplication+PerAppSettings.h"; sourceTree = "<group>"; };
+		68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXApplication+PerAppSettings.m"; sourceTree = "<group>"; };
+		68F3245212116E22003E12B2 /* MobileX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileX_Prefix.pch; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1D60588F0D05DD3D006BFB54 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				01C17E2614810EF500316325 /* UIKit.framework in Frameworks */,
+				68685DCC133DF4A600AFEED6 /* Foundation.framework in Frameworks */,
+				684A7A701362F9C000B4F68C /* QuartzCore.framework in Frameworks */,
+				684A7AB31362FDE000B4F68C /* CoreGraphics.framework in Frameworks */,
+				684A7CDB13632F3900B4F68C /* IOKit.framework in Frameworks */,
+				684A7D0C1363307C00B4F68C /* GraphicsServices.framework in Frameworks */,
+				6857270B1363885A00BEEA8B /* IOSurface.framework in Frameworks */,
+				685727721363937800BEEA8B /* ImageIO.framework in Frameworks */,
+				689B847C137BCA9400D4A160 /* CoreTelephony.framework in Frameworks */,
+				68CF69BB1386B56800B77AEF /* libbsm.dylib in Frameworks */,
+				6899232113A15DB500DFB044 /* IOMobileFramebuffer.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		016A0B4F148A8449007E6F5A /* ImageLoader */ = {
+			isa = PBXGroup;
+			children = (
+				016A0B4C148A8446007E6F5A /* ImageLoaderMachO.mm */,
+				016A0B4D148A8446007E6F5A /* ImageLoaderMachO.h */,
+			);
+			name = ImageLoader;
+			sourceTree = "<group>";
+		};
+		01C17E301481235600316325 /* uiKitProxy */ = {
+			isa = PBXGroup;
+			children = (
+				01C17E311481236C00316325 /* uiKitProxy.h */,
+				01C17E321481236C00316325 /* uiKitProxy.m */,
+			);
+			name = uiKitProxy;
+			sourceTree = "<group>";
+		};
+		19C28FACFE9D520D11CA2CBB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1D6058910D05DD3D006BFB54 /* MobileX */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
+			isa = PBXGroup;
+			children = (
+				684A7CB213632E5400B4F68C /* Main */,
+				29B97315FDCFA39411CA2CEA /* Sources */,
+				686BF9711389118A004B6DF1 /* Documentation */,
+				6810FB7D1200AB0600B3E2C3 /* Resources */,
+				29B97323FDCFA39411CA2CEA /* Frameworks */,
+				19C28FACFE9D520D11CA2CBB /* Products */,
+			);
+			name = CustomTemplate;
+			sourceTree = "<group>";
+		};
+		29B97315FDCFA39411CA2CEA /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				680D6317139A9DED00B30370 /* Obsolete */,
+				684A7B9913630B0600B4F68C /* MXQuartz */,
+				684A7A6D1362F9B000B4F68C /* MXKit */,
+				68572A82136461B100BEEA8B /* MXWindowManager */,
+				68573213136570A700BEEA8B /* Core Logic */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				01C17E2514810EF500316325 /* UIKit.framework */,
+				6899232013A15DB500DFB044 /* IOMobileFramebuffer.framework */,
+				689B847B137BCA9400D4A160 /* CoreTelephony.framework */,
+				685727711363937800BEEA8B /* ImageIO.framework */,
+				68B20CC3136B9F0B000793AE /* SpringBoardServices.framework */,
+				6857270A1363885A00BEEA8B /* IOSurface.framework */,
+				684A7CDA13632F3900B4F68C /* IOKit.framework */,
+				684A7D0B1363307C00B4F68C /* GraphicsServices.framework */,
+				684A7AB21362FDE000B4F68C /* CoreGraphics.framework */,
+				68685DCB133DF4A600AFEED6 /* Foundation.framework */,
+				684A7A6F1362F9C000B4F68C /* QuartzCore.framework */,
+				68CF69BA1386B56800B77AEF /* libbsm.dylib */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		680D6317139A9DED00B30370 /* Obsolete */ = {
+			isa = PBXGroup;
+			children = (
+				689B884F137E91D900D4A160 /* MXDashboard */,
+				68572C57136492F200BEEA8B /* MXPanePreview */,
+				68572A83136461C400BEEA8B /* MXTaskbar */,
+				684A7EE3136350AB00B4F68C /* MXDesktop */,
+			);
+			name = Obsolete;
+			sourceTree = "<group>";
+		};
+		6810FB7D1200AB0600B3E2C3 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				6810FB7F1200AB1700B3E2C3 /* Info.plist */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		6814E86813845D3F005205E5 /* Folder */ = {
+			isa = PBXGroup;
+			children = (
+				6859587913843A0F007750FD /* MXFolder.h */,
+				6859587A13843A0F007750FD /* MXFolder.m */,
+			);
+			name = Folder;
+			sourceTree = "<group>";
+		};
+		6814E8DA138462DA005205E5 /* Reveal */ = {
+			isa = PBXGroup;
+			children = (
+				6814E8DB138462E8005205E5 /* MXPaneManager+Reveal.h */,
+				6814E8DC138462E8005205E5 /* MXPaneManager+Reveal.m */,
+			);
+			name = Reveal;
+			sourceTree = "<group>";
+		};
+		68232E62136F8A1B005AAA65 /* MXGestureRecognizer */ = {
+			isa = PBXGroup;
+			children = (
+				68232E63136F8A2E005AAA65 /* MXGestureRecognizer.h */,
+				68232E64136F8A2E005AAA65 /* MXGestureRecognizer.m */,
+			);
+			name = MXGestureRecognizer;
+			sourceTree = "<group>";
+		};
+		68232E68136F8B44005AAA65 /* MXMultitouchHandler */ = {
+			isa = PBXGroup;
+			children = (
+				68232E69136F8B6F005AAA65 /* MXMultitouchHandler.h */,
+				68232E6A136F8B6F005AAA65 /* MXMultitouchHandler.m */,
+			);
+			name = MXMultitouchHandler;
+			sourceTree = "<group>";
+		};
+		68232F941371BB1E005AAA65 /* MXSettingsController */ = {
+			isa = PBXGroup;
+			children = (
+				68232FBC1371C79E005AAA65 /* MXSettingsController.h */,
+				68232FBD1371C79E005AAA65 /* MXSettingsController.m */,
+			);
+			name = MXSettingsController;
+			sourceTree = "<group>";
+		};
+		683D4E0613753F710044480D /* MXBoundScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				683D4E0713753F7E0044480D /* MXBoundScrollLayer.h */,
+				683D4E0813753F7E0044480D /* MXBoundScrollLayer.m */,
+			);
+			name = MXBoundScrollLayer;
+			sourceTree = "<group>";
+		};
+		683D5033137569F70044480D /* MXScroller */ = {
+			isa = PBXGroup;
+			children = (
+				683D503413756A050044480D /* MXScroller.h */,
+				683D503513756A050044480D /* MXScroller.m */,
+			);
+			name = MXScroller;
+			sourceTree = "<group>";
+		};
+		683D53E01375C9B80044480D /* MXWallpaperLayer */ = {
+			isa = PBXGroup;
+			children = (
+				6823314E1372FC0B005AAA65 /* MXWallpaperLayer.h */,
+				6823314F1372FC0B005AAA65 /* MXWallpaperLayer.m */,
+			);
+			name = MXWallpaperLayer;
+			sourceTree = "<group>";
+		};
+		683D53E21375C9CC0044480D /* MXIconSupport */ = {
+			isa = PBXGroup;
+			children = (
+				684A7EED136350D800B4F68C /* MXIcon */,
+				683D53E61375C9F50044480D /* MXApplicationIcon */,
+				683D53E51375C9EB0044480D /* MXIconScrollLayer */,
+				683D53E41375C9E00044480D /* MXIconListLayer */,
+				683D53E31375C9D70044480D /* MXIconController */,
+			);
+			name = MXIconSupport;
+			sourceTree = "<group>";
+		};
+		683D53E31375C9D70044480D /* MXIconController */ = {
+			isa = PBXGroup;
+			children = (
+				682331331372FB85005AAA65 /* MXIconController.h */,
+				682331341372FB85005AAA65 /* MXIconController.m */,
+			);
+			name = MXIconController;
+			sourceTree = "<group>";
+		};
+		683D53E41375C9E00044480D /* MXIconListLayer */ = {
+			isa = PBXGroup;
+			children = (
+				682331351372FB85005AAA65 /* MXIconListLayer.h */,
+				682331361372FB85005AAA65 /* MXIconListLayer.m */,
+			);
+			name = MXIconListLayer;
+			sourceTree = "<group>";
+		};
+		683D53E51375C9EB0044480D /* MXIconScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				682331371372FB85005AAA65 /* MXIconScrollLayer.h */,
+				682331381372FB85005AAA65 /* MXIconScrollLayer.m */,
+			);
+			name = MXIconScrollLayer;
+			sourceTree = "<group>";
+		};
+		683D53E61375C9F50044480D /* MXApplicationIcon */ = {
+			isa = PBXGroup;
+			children = (
+				6823311F1372FB10005AAA65 /* MXApplicationIcon.h */,
+				682331201372FB10005AAA65 /* MXApplicationIcon.m */,
+			);
+			name = MXApplicationIcon;
+			sourceTree = "<group>";
+		};
+		683D54641375D4C40044480D /* UISharedImagesServer */ = {
+			isa = PBXGroup;
+			children = (
+				016A0B4F148A8449007E6F5A /* ImageLoader */,
+				68572E7A1364C3F600BEEA8B /* MXUIKitSharedImageServer.h */,
+				68572E7B1364C3F600BEEA8B /* MXUIKitSharedImageServer.mm */,
+				017C7FAA14AE742F003F175D /* legacyUiSharedImageServer.h */,
+				017C7FAB14AE742F003F175D /* legacyUiSharedImageServer.m */,
+			);
+			name = UISharedImagesServer;
+			sourceTree = "<group>";
+		};
+		683D55E9137616330044480D /* CALayer+MX */ = {
+			isa = PBXGroup;
+			children = (
+				684A7B9A13630B1400B4F68C /* CALayer+MX.h */,
+				684A7B9B13630B1400B4F68C /* CALayer+MX.m */,
+			);
+			name = "CALayer+MX";
+			sourceTree = "<group>";
+		};
+		683D582B137651E30044480D /* PrivateHeaders */ = {
+			isa = PBXGroup;
+			children = (
+				68B1727B138EABC7007F7431 /* libbsm */,
+				689B845E137BC80500D4A160 /* CoreTelephony */,
+				683D582D137651FE0044480D /* CoreAnimation */,
+				683D582C137651EB0044480D /* CoreGraphics */,
+			);
+			name = PrivateHeaders;
+			sourceTree = "<group>";
+		};
+		683D582C137651EB0044480D /* CoreGraphics */ = {
+			isa = PBXGroup;
+			children = (
+				683D55F413761A380044480D /* CGPrivateMethods.h */,
+			);
+			name = CoreGraphics;
+			sourceTree = "<group>";
+		};
+		683D582D137651FE0044480D /* CoreAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				683D55EA1376164C0044480D /* CARenderContext.h */,
+				683D55F11376190D0044480D /* CARenderServer.h */,
+				683D562113761B7D0044480D /* CARenderSharedImage.h */,
+			);
+			name = CoreAnimation;
+			sourceTree = "<group>";
+		};
+		683D585E1376BF030044480D /* MXFont */ = {
+			isa = PBXGroup;
+			children = (
+				683D585F1376BF130044480D /* MXFont.h */,
+				683D58601376BF130044480D /* MXFont.m */,
+			);
+			name = MXFont;
+			sourceTree = "<group>";
+		};
+		683D59F613773A590044480D /* MXMenu */ = {
+			isa = PBXGroup;
+			children = (
+				683D5A4F13773F200044480D /* MXMenuItem */,
+				683D59F913773B350044480D /* MXMenu.h */,
+				683D59FA13773B350044480D /* MXMenu.m */,
+			);
+			name = MXMenu;
+			sourceTree = "<group>";
+		};
+		683D5A4F13773F200044480D /* MXMenuItem */ = {
+			isa = PBXGroup;
+			children = (
+				683D5A5013773F470044480D /* MXMenuItem.h */,
+				683D5A5113773F470044480D /* MXMenuItem.m */,
+			);
+			name = MXMenuItem;
+			sourceTree = "<group>";
+		};
+		684A7A6D1362F9B000B4F68C /* MXKit */ = {
+			isa = PBXGroup;
+			children = (
+				68B20B2C136AF682000793AE /* MXLayer */,
+				68572BE61364796C00BEEA8B /* SupportKit */,
+				68572BE51364795D00BEEA8B /* UserInterface */,
+				684A7F601363570600B4F68C /* MXKit.h */,
+			);
+			name = MXKit;
+			sourceTree = "<group>";
+		};
+		684A7A871362FA9300B4F68C /* MXController */ = {
+			isa = PBXGroup;
+			children = (
+				01C17E301481235600316325 /* uiKitProxy */,
+				684A7E1613634B6A00B4F68C /* MX+EventHandling */,
+				684A7E0613634AAE00B4F68C /* MX+Internal */,
+				684A7A881362FA9E00B4F68C /* MXController.h */,
+				684A7A891362FA9E00B4F68C /* MXController.m */,
+			);
+			name = MXController;
+			sourceTree = "<group>";
+		};
+		684A7A901362FBA900B4F68C /* MXMainLayer */ = {
+			isa = PBXGroup;
+			children = (
+				684A7A911362FBCA00B4F68C /* MXMainLayer.h */,
+				684A7A921362FBCA00B4F68C /* MXMainLayer.m */,
+			);
+			name = MXMainLayer;
+			sourceTree = "<group>";
+		};
+		684A7A9F1362FD5F00B4F68C /* MXColors */ = {
+			isa = PBXGroup;
+			children = (
+				684A7AA01362FD6A00B4F68C /* MXColors.h */,
+				684A7AA11362FD6A00B4F68C /* MXColors.m */,
+			);
+			name = MXColors;
+			sourceTree = "<group>";
+		};
+		684A7AFB1362FFC100B4F68C /* MXWindow */ = {
+			isa = PBXGroup;
+			children = (
+				68954293136F12D100968296 /* MXWindowFrame */,
+				68954270136F10BF00968296 /* MXWindowDrawing */,
+				685730F61364F9A600BEEA8B /* MXWindowButton */,
+				68572669136370B700BEEA8B /* MXWindow.h */,
+				6857266A136370B700BEEA8B /* MXWindow.m */,
+			);
+			name = MXWindow;
+			sourceTree = "<group>";
+		};
+		684A7AFC1362FFDD00B4F68C /* MXText */ = {
+			isa = PBXGroup;
+			children = (
+				684A7AFD1362FFF500B4F68C /* MXText.h */,
+				684A7AFE1362FFF500B4F68C /* MXText.m */,
+			);
+			name = MXText;
+			sourceTree = "<group>";
+		};
+		684A7B041363009000B4F68C /* MXCG */ = {
+			isa = PBXGroup;
+			children = (
+				684A7B051363009C00B4F68C /* MXCG.h */,
+				684A7B061363009C00B4F68C /* MXCG.m */,
+			);
+			name = MXCG;
+			sourceTree = "<group>";
+		};
+		684A7B9913630B0600B4F68C /* MXQuartz */ = {
+			isa = PBXGroup;
+			children = (
+				689B8514137BDFAA00D4A160 /* MXBasicAnimation */,
+				683D55E9137616330044480D /* CALayer+MX */,
+			);
+			name = MXQuartz;
+			sourceTree = "<group>";
+		};
+		684A7C551363261500B4F68C /* MXImageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				684A7C561363261F00B4F68C /* MXImageLayer.h */,
+				684A7C571363261F00B4F68C /* MXImageLayer.m */,
+			);
+			name = MXImageLayer;
+			sourceTree = "<group>";
+		};
+		684A7CB113632E3400B4F68C /* MXHIDController */ = {
+			isa = PBXGroup;
+			children = (
+				684A7CCE13632EE600B4F68C /* MXHIDController.h */,
+				684A7CCF13632EE600B4F68C /* MXHIDController.m */,
+			);
+			name = MXHIDController;
+			sourceTree = "<group>";
+		};
+		684A7CB213632E5400B4F68C /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				683D582B137651E30044480D /* PrivateHeaders */,
+				687B8D15136DEB51009D1D64 /* Logging */,
+				687B8BFE136DCAB8009D1D64 /* NSDictionary */,
+				68B20ED4136CA0A8000793AE /* POSIXTask */,
+				684A7D95136346E100B4F68C /* Events */,
+				689B9036137FC62C00D4A160 /* PreRun */,
+				68F3245212116E22003E12B2 /* MobileX_Prefix.pch */,
+				29B97316FDCFA39411CA2CEA /* MobileX.m */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		684A7D95136346E100B4F68C /* Events */ = {
+			isa = PBXGroup;
+			children = (
+				684A7D961363470100B4F68C /* MTTouchType.h */,
+				689B8A0B137EAE1A00D4A160 /* MXHardwareButton.h */,
+			);
+			name = Events;
+			sourceTree = "<group>";
+		};
+		684A7E0213634A3200B4F68C /* MXUIController */ = {
+			isa = PBXGroup;
+			children = (
+				684A7E0313634A4300B4F68C /* MXUIController.h */,
+				684A7E0413634A4300B4F68C /* MXUIController.m */,
+			);
+			name = MXUIController;
+			sourceTree = "<group>";
+		};
+		684A7E0613634AAE00B4F68C /* MX+Internal */ = {
+			isa = PBXGroup;
+			children = (
+				684A7E0713634AC900B4F68C /* MXController+Internal.h */,
+				684A7E0813634AC900B4F68C /* MXController+Internal.m */,
+			);
+			name = "MX+Internal";
+			sourceTree = "<group>";
+		};
+		684A7E1613634B6A00B4F68C /* MX+EventHandling */ = {
+			isa = PBXGroup;
+			children = (
+				684A7E1713634B7B00B4F68C /* MXController+EventHandling.h */,
+				684A7E1813634B7B00B4F68C /* MXController+EventHandling.m */,
+			);
+			name = "MX+EventHandling";
+			sourceTree = "<group>";
+		};
+		684A7EE3136350AB00B4F68C /* MXDesktop */ = {
+			isa = PBXGroup;
+			children = (
+				689B912D137FE5B800D4A160 /* MXClippedImageLayer */,
+				683D53E01375C9B80044480D /* MXWallpaperLayer */,
+				683D53E21375C9CC0044480D /* MXIconSupport */,
+				684A7EEE136350DE00B4F68C /* MXDesktopController */,
+			);
+			name = MXDesktop;
+			sourceTree = "<group>";
+		};
+		684A7EE7136350BD00B4F68C /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				682331531372FC2A005AAA65 /* MXDesktopLayer.h */,
+				682331541372FC2A005AAA65 /* MXDesktopLayer.m */,
+			);
+			name = Layer;
+			sourceTree = "<group>";
+		};
+		684A7EED136350D800B4F68C /* MXIcon */ = {
+			isa = PBXGroup;
+			children = (
+				68595876138439A5007750FD /* MXFolder */,
+				685249FD13660683007BE5B3 /* MXIconImage */,
+				684A7EF41363514200B4F68C /* MXIcon.h */,
+				684A7EF51363514200B4F68C /* MXIcon.m */,
+			);
+			name = MXIcon;
+			sourceTree = "<group>";
+		};
+		684A7EEE136350DE00B4F68C /* MXDesktopController */ = {
+			isa = PBXGroup;
+			children = (
+				684A7EE7136350BD00B4F68C /* Layer */,
+				682331401372FBB6005AAA65 /* MXDesktopController.h */,
+				682331411372FBB6005AAA65 /* MXDesktopController.m */,
+			);
+			name = MXDesktopController;
+			sourceTree = "<group>";
+		};
+		684A80061363635800B4F68C /* AppServices */ = {
+			isa = PBXGroup;
+			children = (
+				68CF702E138824D100B77AEF /* MXApplicationStateServices */,
+				68CF6C10138707CC00B77AEF /* MXRenderManager */,
+				6859564F13840778007750FD /* MXPortCache */,
+				68B20BAA136B7AE5000793AE /* MXProcess */,
+				68524827136587D8007BE5B3 /* MXBundle */,
+				68524826136587BB007BE5B3 /* MXApplication */,
+				68572E791364C3CE00BEEA8B /* MXUIKitServices */,
+			);
+			name = AppServices;
+			sourceTree = "<group>";
+		};
+		684A80071363636200B4F68C /* MXApplicationController */ = {
+			isa = PBXGroup;
+			children = (
+				684A80451363658100B4F68C /* MXApplicationController.h */,
+				684A80461363658100B4F68C /* MXApplicationController.m */,
+			);
+			name = MXApplicationController;
+			sourceTree = "<group>";
+		};
+		685248231365878B007BE5B3 /* SBServicesServer */ = {
+			isa = PBXGroup;
+			children = (
+				68B20D8F136C4338000793AE /* MigServer */,
+				684A8024136363D900B4F68C /* SBSpringBoardServicesMachServer.h */,
+				684A8025136363D900B4F68C /* SBSpringBoardServicesMachServer.m */,
+			);
+			name = SBServicesServer;
+			sourceTree = "<group>";
+		};
+		6852482413658799007BE5B3 /* Bootstrap */ = {
+			isa = PBXGroup;
+			children = (
+				684A801D136363D900B4F68C /* BootstrapServices.h */,
+			);
+			name = Bootstrap;
+			sourceTree = "<group>";
+		};
+		68524826136587BB007BE5B3 /* MXApplication */ = {
+			isa = PBXGroup;
+			children = (
+				68CF704B13882D4800B77AEF /* MXApplication+PerAppSettings */,
+				684A80121363638000B4F68C /* MXApplication.h */,
+				684A80131363638000B4F68C /* MXApplication.m */,
+			);
+			name = MXApplication;
+			sourceTree = "<group>";
+		};
+		68524827136587D8007BE5B3 /* MXBundle */ = {
+			isa = PBXGroup;
+			children = (
+				684A8018136363B000B4F68C /* MXBundle.h */,
+				684A8019136363B000B4F68C /* MXBundle.m */,
+			);
+			name = MXBundle;
+			sourceTree = "<group>";
+		};
+		685248281365881E007BE5B3 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				689B8EB6137F12BC00D4A160 /* MXSleepController */,
+				68232F941371BB1E005AAA65 /* MXSettingsController */,
+				68232E68136F8B44005AAA65 /* MXMultitouchHandler */,
+				684A80071363636200B4F68C /* MXApplicationController */,
+				68573214136570E300BEEA8B /* MXPlatformController */,
+				684A7CB113632E3400B4F68C /* MXHIDController */,
+				684A7E0213634A3200B4F68C /* MXUIController */,
+				684A7A871362FA9300B4F68C /* MXController */,
+			);
+			name = Controllers;
+			sourceTree = "<group>";
+		};
+		685248291365882A007BE5B3 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				68B17298138EB424007F7431 /* IOFlashStorage */,
+				686BFADC13892F6D004B6DF1 /* IPC */,
+				689B8D0F137EEFC300D4A160 /* MXQuartzWindowServer */,
+				68B20C79136B92F9000793AE /* MXIOTools */,
+				6852482A13658831007BE5B3 /* MXLaunchdUtilities */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		6852482A13658831007BE5B3 /* MXLaunchdUtilities */ = {
+			isa = PBXGroup;
+			children = (
+				684A8015136363A600B4F68C /* MXLaunchdUtilities.h */,
+				684A8016136363A600B4F68C /* MXLaunchdUtilities.m */,
+			);
+			name = MXLaunchdUtilities;
+			sourceTree = "<group>";
+		};
+		6852484013659DAD007BE5B3 /* MXScrollLayer */ = {
+			isa = PBXGroup;
+			children = (
+				683D4E0613753F710044480D /* MXBoundScrollLayer */,
+				683D5033137569F70044480D /* MXScroller */,
+				682331701372FD47005AAA65 /* MXScrollLayer.h */,
+				682331711372FD47005AAA65 /* MXScrollLayer.m */,
+			);
+			name = MXScrollLayer;
+			sourceTree = "<group>";
+		};
+		685249FD13660683007BE5B3 /* MXIconImage */ = {
+			isa = PBXGroup;
+			children = (
+				685249FE1366069B007BE5B3 /* MXIconImage.h */,
+				685249FF1366069B007BE5B3 /* MXIconImage.m */,
+			);
+			name = MXIconImage;
+			sourceTree = "<group>";
+		};
+		6857293D136445F100BEEA8B /* MXControl */ = {
+			isa = PBXGroup;
+			children = (
+				6857293E136445FE00BEEA8B /* MXControl.h */,
+				6857293F136445FE00BEEA8B /* MXControl.m */,
+			);
+			name = MXControl;
+			sourceTree = "<group>";
+		};
+		68572A0B1364508400BEEA8B /* MXButton */ = {
+			isa = PBXGroup;
+			children = (
+				68572A0C1364508D00BEEA8B /* MXButton.h */,
+				68572A0D1364508D00BEEA8B /* MXButton.m */,
+			);
+			name = MXButton;
+			sourceTree = "<group>";
+		};
+		68572A82136461B100BEEA8B /* MXWindowManager */ = {
+			isa = PBXGroup;
+			children = (
+				68B17282138EB28F007F7431 /* MXPreferences */,
+				68572A9C136463DC00BEEA8B /* MXPaneManager */,
+				6895414D136ED93600968296 /* MXHostWindow */,
+			);
+			name = MXWindowManager;
+			sourceTree = "<group>";
+		};
+		68572A83136461C400BEEA8B /* MXTaskbar */ = {
+			isa = PBXGroup;
+			children = (
+				68572DB81364BAE000BEEA8B /* MXTaskbarPanePreviewItem */,
+				68572B3713646C1700BEEA8B /* MXTaskbarIconItem */,
+				68572A9D1364643200BEEA8B /* MXTaskbarItem */,
+				68572A95136463AF00BEEA8B /* MXTaskbar.h */,
+				68572A96136463AF00BEEA8B /* MXTaskbar.m */,
+			);
+			name = MXTaskbar;
+			sourceTree = "<group>";
+		};
+		68572A851364623900BEEA8B /* MXPane */ = {
+			isa = PBXGroup;
+			children = (
+				68572A861364624200BEEA8B /* MXPane.h */,
+				68572A871364624200BEEA8B /* MXPane.m */,
+			);
+			name = MXPane;
+			sourceTree = "<group>";
+		};
+		68572A9C136463DC00BEEA8B /* MXPaneManager */ = {
+			isa = PBXGroup;
+			children = (
+				6814E8DA138462DA005205E5 /* Reveal */,
+				6859574B13841D4C007750FD /* Expose */,
+				68572B9F136474C200BEEA8B /* MXPaneManager.h */,
+				68572BA0136474C200BEEA8B /* MXPaneManager.m */,
+			);
+			name = MXPaneManager;
+			sourceTree = "<group>";
+		};
+		68572A9D1364643200BEEA8B /* MXTaskbarItem */ = {
+			isa = PBXGroup;
+			children = (
+				68572A9E1364646D00BEEA8B /* MXTaskbarItem.h */,
+				68572A9F1364646D00BEEA8B /* MXTaskbarItem.m */,
+			);
+			name = MXTaskbarItem;
+			sourceTree = "<group>";
+		};
+		68572B3713646C1700BEEA8B /* MXTaskbarIconItem */ = {
+			isa = PBXGroup;
+			children = (
+				68572B3813646C2900BEEA8B /* MXTaskbarIconItem.h */,
+				68572B3913646C2900BEEA8B /* MXTaskbarIconItem.m */,
+			);
+			name = MXTaskbarIconItem;
+			sourceTree = "<group>";
+		};
+		68572BE41364795300BEEA8B /* MXImage */ = {
+			isa = PBXGroup;
+			children = (
+				68572BE71364797B00BEEA8B /* MXImage.h */,
+				68572BE81364797B00BEEA8B /* MXImage.m */,
+			);
+			name = MXImage;
+			sourceTree = "<group>";
+		};
+		68572BE51364795D00BEEA8B /* UserInterface */ = {
+			isa = PBXGroup;
+			children = (
+				683D59F613773A590044480D /* MXMenu */,
+				68B9F980137345F500B912F6 /* MXTableView */,
+				68B9F9231373404100B912F6 /* MXCheckbox */,
+				6852484013659DAD007BE5B3 /* MXScrollLayer */,
+				68572A851364623900BEEA8B /* MXPane */,
+				68572A0B1364508400BEEA8B /* MXButton */,
+				6857293D136445F100BEEA8B /* MXControl */,
+				684A7C551363261500B4F68C /* MXImageLayer */,
+				684A7AFC1362FFDD00B4F68C /* MXText */,
+				684A7AFB1362FFC100B4F68C /* MXWindow */,
+				684A7A901362FBA900B4F68C /* MXMainLayer */,
+			);
+			name = UserInterface;
+			sourceTree = "<group>";
+		};
+		68572BE61364796C00BEEA8B /* SupportKit */ = {
+			isa = PBXGroup;
+			children = (
+				689B88EA137E975B00D4A160 /* MXScreenCapture */,
+				683D585E1376BF030044480D /* MXFont */,
+				684A7B041363009000B4F68C /* MXCG */,
+				68232E62136F8A1B005AAA65 /* MXGestureRecognizer */,
+				687B8BDD136DB6D3009D1D64 /* MXDevice */,
+				68B20A51136AE3EF000793AE /* MXUIDrawing */,
+				684A7A9F1362FD5F00B4F68C /* MXColors */,
+				68572BE41364795300BEEA8B /* MXImage */,
+			);
+			name = SupportKit;
+			sourceTree = "<group>";
+		};
+		68572C57136492F200BEEA8B /* MXPanePreview */ = {
+			isa = PBXGroup;
+			children = (
+				68572C581364930C00BEEA8B /* MXPanePreview.h */,
+				68572C591364930C00BEEA8B /* MXPanePreview.m */,
+			);
+			name = MXPanePreview;
+			sourceTree = "<group>";
+		};
+		68572DB81364BAE000BEEA8B /* MXTaskbarPanePreviewItem */ = {
+			isa = PBXGroup;
+			children = (
+				68572DB91364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.h */,
+				68572DBA1364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.m */,
+			);
+			name = MXTaskbarPanePreviewItem;
+			sourceTree = "<group>";
+		};
+		68572E2E1364C04C00BEEA8B /* MXRenderLayer */ = {
+			isa = PBXGroup;
+			children = (
+				68572F2F1364D5EE00BEEA8B /* MXLayerHost */,
+				68572E2F1364C08F00BEEA8B /* MXRenderLayer.h */,
+				68572E301364C08F00BEEA8B /* MXRenderLayer.m */,
+			);
+			name = MXRenderLayer;
+			sourceTree = "<group>";
+		};
+		68572E791364C3CE00BEEA8B /* MXUIKitServices */ = {
+			isa = PBXGroup;
+			children = (
+				686BFADD13892FA1004B6DF1 /* UIStatusBarServer */,
+				683D54641375D4C40044480D /* UISharedImagesServer */,
+				685248231365878B007BE5B3 /* SBServicesServer */,
+			);
+			name = MXUIKitServices;
+			sourceTree = "<group>";
+		};
+		68572F2F1364D5EE00BEEA8B /* MXLayerHost */ = {
+			isa = PBXGroup;
+			children = (
+				68572F301364D5F800BEEA8B /* MXLayerHost.h */,
+				68572F311364D5F800BEEA8B /* MXLayerHost.m */,
+			);
+			name = MXLayerHost;
+			sourceTree = "<group>";
+		};
+		685730F61364F9A600BEEA8B /* MXWindowButton */ = {
+			isa = PBXGroup;
+			children = (
+				685730F71364F9B700BEEA8B /* MXWindowButton.h */,
+				685730F81364F9B700BEEA8B /* MXWindowButton.m */,
+			);
+			name = MXWindowButton;
+			sourceTree = "<group>";
+		};
+		68573213136570A700BEEA8B /* Core Logic */ = {
+			isa = PBXGroup;
+			children = (
+				68CF6C2A13870AD100B77AEF /* RPC */,
+				685248291365882A007BE5B3 /* Utilities */,
+				684A80061363635800B4F68C /* AppServices */,
+				685248281365881E007BE5B3 /* Controllers */,
+			);
+			name = "Core Logic";
+			sourceTree = "<group>";
+		};
+		68573214136570E300BEEA8B /* MXPlatformController */ = {
+			isa = PBXGroup;
+			children = (
+				685732161365710500BEEA8B /* MXPlatformController.h */,
+				685732171365710500BEEA8B /* MXPlatformController.m */,
+			);
+			name = MXPlatformController;
+			sourceTree = "<group>";
+		};
+		6859564F13840778007750FD /* MXPortCache */ = {
+			isa = PBXGroup;
+			children = (
+				685956511384078E007750FD /* MXPortCache.h */,
+				685956521384078E007750FD /* MXPortCache.m */,
+			);
+			name = MXPortCache;
+			sourceTree = "<group>";
+		};
+		685956A2138412F6007750FD /* MXCloseCross */ = {
+			isa = PBXGroup;
+			children = (
+				685956A313841306007750FD /* MXCloseCross.h */,
+				685956A413841306007750FD /* MXCloseCross.m */,
+			);
+			name = MXCloseCross;
+			sourceTree = "<group>";
+		};
+		6859574B13841D4C007750FD /* Expose */ = {
+			isa = PBXGroup;
+			children = (
+				687B9F9D1381BED800880185 /* MXExposeLayer */,
+				685956A2138412F6007750FD /* MXCloseCross */,
+				68595775138421AB007750FD /* MXPaneManager+Expose */,
+			);
+			name = Expose;
+			sourceTree = "<group>";
+		};
+		68595775138421AB007750FD /* MXPaneManager+Expose */ = {
+			isa = PBXGroup;
+			children = (
+				68595776138421BC007750FD /* MXPaneManager+Expose.h */,
+				68595777138421BC007750FD /* MXPaneManager+Expose.m */,
+			);
+			name = "MXPaneManager+Expose";
+			sourceTree = "<group>";
+		};
+		68595876138439A5007750FD /* MXFolder */ = {
+			isa = PBXGroup;
+			children = (
+				6814E86813845D3F005205E5 /* Folder */,
+				6814E86513845D3C005205E5 /* MXFolderIcon.h */,
+				6814E86613845D3C005205E5 /* MXFolderIcon.m */,
+			);
+			name = MXFolder;
+			sourceTree = "<group>";
+		};
+		686BF9711389118A004B6DF1 /* Documentation */ = {
+			isa = PBXGroup;
+			children = (
+				687B8F9F136E499D009D1D64 /* CHANGELOG */,
+				686BF9721389119E004B6DF1 /* UIKIT */,
+				686BFADA13892DB9004B6DF1 /* UIKIT-RESUME-TRACE */,
+				01936FA714995AB4001B31EC /* LEGACY_MT */,
+			);
+			name = Documentation;
+			sourceTree = "<group>";
+		};
+		686BF98213891679004B6DF1 /* CPMIGProbing */ = {
+			isa = PBXGroup;
+			children = (
+				686BF98313891690004B6DF1 /* CPMIGProbing.h */,
+				686BF98413891690004B6DF1 /* CPMIGProbing.m */,
+			);
+			name = CPMIGProbing;
+			sourceTree = "<group>";
+		};
+		686BFADC13892F6D004B6DF1 /* IPC */ = {
+			isa = PBXGroup;
+			children = (
+				688D039013A1076800AEC2BB /* MiGStarter */,
+				6852482413658799007BE5B3 /* Bootstrap */,
+				686BF98213891679004B6DF1 /* CPMIGProbing */,
+				68CF6E6A1387E72A00B77AEF /* CPMIGServerSource */,
+			);
+			name = IPC;
+			sourceTree = "<group>";
+		};
+		686BFADD13892FA1004B6DF1 /* UIStatusBarServer */ = {
+			isa = PBXGroup;
+			children = (
+				686BFAE213892FFF004B6DF1 /* MigServer */,
+				686BFADE13892FB8004B6DF1 /* MXUIStatusBarServer.h */,
+				686BFADF13892FB8004B6DF1 /* MXUIStatusBarServer.m */,
+			);
+			name = UIStatusBarServer;
+			sourceTree = "<group>";
+		};
+		686BFAE213892FFF004B6DF1 /* MigServer */ = {
+			isa = PBXGroup;
+			children = (
+				68CDB0B2139646A800CB09E7 /* MXUIStatusBarMiGServer.m */,
+				686BFAE113892FFC004B6DF1 /* MXUIStatusBarServerCommon.h */,
+			);
+			name = MigServer;
+			sourceTree = "<group>";
+		};
+		687B8BDD136DB6D3009D1D64 /* MXDevice */ = {
+			isa = PBXGroup;
+			children = (
+				687B8BDF136DB6DE009D1D64 /* MXDevice.h */,
+				687B8BE0136DB6DE009D1D64 /* MXDevice.m */,
+			);
+			name = MXDevice;
+			sourceTree = "<group>";
+		};
+		687B8BFE136DCAB8009D1D64 /* NSDictionary */ = {
+			isa = PBXGroup;
+			children = (
+				687B8C15136DCABF009D1D64 /* NSDictionary+BOOL.h */,
+				687B8C16136DCABF009D1D64 /* NSDictionary+BOOL.m */,
+			);
+			name = NSDictionary;
+			sourceTree = "<group>";
+		};
+		687B8D15136DEB51009D1D64 /* Logging */ = {
+			isa = PBXGroup;
+			children = (
+				687B8D1D136DEB7A009D1D64 /* MXLoggingMacros.h */,
+				687B8D77136DF63C009D1D64 /* MXLog.m */,
+			);
+			name = Logging;
+			sourceTree = "<group>";
+		};
+		687B9F9D1381BED800880185 /* MXExposeLayer */ = {
+			isa = PBXGroup;
+			children = (
+				687B9F9F1381BEEC00880185 /* MXExposeLayer.h */,
+				687B9FA01381BEEC00880185 /* MXExposeLayer.m */,
+			);
+			name = MXExposeLayer;
+			sourceTree = "<group>";
+		};
+		688D039013A1076800AEC2BB /* MiGStarter */ = {
+			isa = PBXGroup;
+			children = (
+				688D039213A1078C00AEC2BB /* MXIPCSupport.h */,
+				688D039313A1078C00AEC2BB /* MXIPCSupport.m */,
+			);
+			name = MiGStarter;
+			sourceTree = "<group>";
+		};
+		6895414D136ED93600968296 /* MXHostWindow */ = {
+			isa = PBXGroup;
+			children = (
+				68572E2E1364C04C00BEEA8B /* MXRenderLayer */,
+				6895414F136ED94A00968296 /* MXHostWindow.h */,
+				68954150136ED94A00968296 /* MXHostWindow.m */,
+			);
+			name = MXHostWindow;
+			sourceTree = "<group>";
+		};
+		68954270136F10BF00968296 /* MXWindowDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				68954271136F10D000968296 /* MXWindow+Drawing.h */,
+				68954272136F10D000968296 /* MXWindow+Drawing.m */,
+			);
+			name = MXWindowDrawing;
+			sourceTree = "<group>";
+		};
+		68954293136F12D100968296 /* MXWindowFrame */ = {
+			isa = PBXGroup;
+			children = (
+				68954294136F12E600968296 /* MXWindow+Frame.h */,
+				68954295136F12E600968296 /* MXWindow+Frame.m */,
+			);
+			name = MXWindowFrame;
+			sourceTree = "<group>";
+		};
+		689B845E137BC80500D4A160 /* CoreTelephony */ = {
+			isa = PBXGroup;
+			children = (
+				689B845F137BC81900D4A160 /* CoreTelephonyPriv.h */,
+				689B849E137BCB7900D4A160 /* CTServerConnection.h */,
+				689B849F137BCBA200D4A160 /* CTRegistration.h */,
+				689B84A0137BCBD800D4A160 /* CTTelephonyCenter.h */,
+				689B8DE3137EF8F000D4A160 /* CTCall.h */,
+			);
+			name = CoreTelephony;
+			sourceTree = "<group>";
+		};
+		689B8514137BDFAA00D4A160 /* MXBasicAnimation */ = {
+			isa = PBXGroup;
+			children = (
+				689B8515137BDFC700D4A160 /* MXBasicAnimation.h */,
+				689B8516137BDFC700D4A160 /* MXBasicAnimation.m */,
+			);
+			name = MXBasicAnimation;
+			sourceTree = "<group>";
+		};
+		689B86BB137E7BBA00D4A160 /* MXTableSectionHeader */ = {
+			isa = PBXGroup;
+			children = (
+				689B86BC137E7BEC00D4A160 /* MXTableSectionHeader.h */,
+				689B86BD137E7BEC00D4A160 /* MXTableSectionHeader.m */,
+			);
+			name = MXTableSectionHeader;
+			sourceTree = "<group>";
+		};
+		689B884F137E91D900D4A160 /* MXDashboard */ = {
+			isa = PBXGroup;
+			children = (
+				689B89B3137EAAA600D4A160 /* Layer */,
+				689B89B0137EAAA300D4A160 /* MXDashboardController.h */,
+				689B89B1137EAAA300D4A160 /* MXDashboardController.m */,
+			);
+			name = MXDashboard;
+			sourceTree = "<group>";
+		};
+		689B88EA137E975B00D4A160 /* MXScreenCapture */ = {
+			isa = PBXGroup;
+			children = (
+				689B88EB137E979D00D4A160 /* MXScreenCapture.h */,
+				689B88EC137E979D00D4A160 /* MXScreenCapture.m */,
+			);
+			name = MXScreenCapture;
+			sourceTree = "<group>";
+		};
+		689B89B3137EAAA600D4A160 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				689B8850137E91F100D4A160 /* MXDashboardLayer.h */,
+				689B8851137E91F100D4A160 /* MXDashboardLayer.m */,
+			);
+			name = Layer;
+			sourceTree = "<group>";
+		};
+		689B8D0F137EEFC300D4A160 /* MXQuartzWindowServer */ = {
+			isa = PBXGroup;
+			children = (
+				689B8D10137EEFD800D4A160 /* MXQuartzWindowServer.h */,
+				689B8D11137EEFD800D4A160 /* MXQuartzWindowServer.m */,
+			);
+			name = MXQuartzWindowServer;
+			sourceTree = "<group>";
+		};
+		689B8D52137EF4AD00D4A160 /* Testing */ = {
+			isa = PBXGroup;
+			children = (
+				689B8D53137EF4B800D4A160 /* MXTesting.h */,
+				689B8D54137EF4B800D4A160 /* MXTesting.m */,
+			);
+			name = Testing;
+			sourceTree = "<group>";
+		};
+		689B8EB6137F12BC00D4A160 /* MXSleepController */ = {
+			isa = PBXGroup;
+			children = (
+				689B8EB7137F12CB00D4A160 /* MXSleepController.h */,
+				689B8EB8137F12CB00D4A160 /* MXSleepController.m */,
+			);
+			name = MXSleepController;
+			sourceTree = "<group>";
+		};
+		689B8EED137F1C8B00D4A160 /* PreferencesWindow */ = {
+			isa = PBXGroup;
+			children = (
+				689B8EEE137F1CA300D4A160 /* MXPreferencesWindowController.h */,
+				689B8EEF137F1CA300D4A160 /* MXPreferencesWindowController.m */,
+			);
+			name = PreferencesWindow;
+			sourceTree = "<group>";
+		};
+		689B9036137FC62C00D4A160 /* PreRun */ = {
+			isa = PBXGroup;
+			children = (
+				689B9046137FC66B00D4A160 /* SpringBoardRunIn */,
+				689B8D52137EF4AD00D4A160 /* Testing */,
+			);
+			name = PreRun;
+			sourceTree = "<group>";
+		};
+		689B9046137FC66B00D4A160 /* SpringBoardRunIn */ = {
+			isa = PBXGroup;
+			children = (
+				689B9047137FC69C00D4A160 /* MXSBInitialization.h */,
+				689B9048137FC69C00D4A160 /* MXSBInitialization.m */,
+			);
+			name = SpringBoardRunIn;
+			sourceTree = "<group>";
+		};
+		689B912D137FE5B800D4A160 /* MXClippedImageLayer */ = {
+			isa = PBXGroup;
+			children = (
+				689B912E137FE5D200D4A160 /* MXClippedImageLayer.h */,
+				689B912F137FE5D200D4A160 /* MXClippedImageLayer.m */,
+			);
+			name = MXClippedImageLayer;
+			sourceTree = "<group>";
+		};
+		68B1727B138EABC7007F7431 /* libbsm */ = {
+			isa = PBXGroup;
+			children = (
+				68B1727D138EABE2007F7431 /* libbsm.h */,
+			);
+			name = libbsm;
+			sourceTree = "<group>";
+		};
+		68B17282138EB28F007F7431 /* MXPreferences */ = {
+			isa = PBXGroup;
+			children = (
+				689B8EED137F1C8B00D4A160 /* PreferencesWindow */,
+			);
+			name = MXPreferences;
+			sourceTree = "<group>";
+		};
+		68B17298138EB424007F7431 /* IOFlashStorage */ = {
+			isa = PBXGroup;
+			children = (
+				68B17299138EB42E007F7431 /* IOFlashStorage.h */,
+				68B1729A138EB42E007F7431 /* IOFlashStorage.m */,
+			);
+			name = IOFlashStorage;
+			sourceTree = "<group>";
+		};
+		68B20A51136AE3EF000793AE /* MXUIDrawing */ = {
+			isa = PBXGroup;
+			children = (
+				68B20A53136AE423000793AE /* MXUIDrawing.h */,
+				68B20A54136AE423000793AE /* MXUIDrawing.m */,
+			);
+			name = MXUIDrawing;
+			sourceTree = "<group>";
+		};
+		68B20B2C136AF682000793AE /* MXLayer */ = {
+			isa = PBXGroup;
+			children = (
+				689B8763137E84B600D4A160 /* MXLayer.h */,
+				689B8764137E84B600D4A160 /* MXLayer.m */,
+			);
+			name = MXLayer;
+			sourceTree = "<group>";
+		};
+		68B20BAA136B7AE5000793AE /* MXProcess */ = {
+			isa = PBXGroup;
+			children = (
+				68B20D9D136C66A2000793AE /* MXProcess.h */,
+				68B20D9E136C66A2000793AE /* MXProcess.m */,
+			);
+			name = MXProcess;
+			sourceTree = "<group>";
+		};
+		68B20C79136B92F9000793AE /* MXIOTools */ = {
+			isa = PBXGroup;
+			children = (
+				68B20C7A136B9305000793AE /* MXIOTools.h */,
+				68B20C7B136B9305000793AE /* MXIOTools.m */,
+			);
+			name = MXIOTools;
+			sourceTree = "<group>";
+		};
+		68B20D8F136C4338000793AE /* MigServer */ = {
+			isa = PBXGroup;
+			children = (
+				68CDAF531395AD7E00CB09E7 /* SpringBoardServices.h */,
+				68CDAF511395AD6800CB09E7 /* SpringBoardServicesServer.m */,
+				68B20CDD136BA1B1000793AE /* SpringBoardServices_Common.h */,
+			);
+			name = MigServer;
+			sourceTree = "<group>";
+		};
+		68B20ED4136CA0A8000793AE /* POSIXTask */ = {
+			isa = PBXGroup;
+			children = (
+				68B20ED8136CA0B7000793AE /* POSIXTask.h */,
+				68B20ED9136CA0B8000793AE /* POSIXTask.m */,
+			);
+			name = POSIXTask;
+			sourceTree = "<group>";
+		};
+		68B9F9231373404100B912F6 /* MXCheckbox */ = {
+			isa = PBXGroup;
+			children = (
+				68B9F9251373404D00B912F6 /* MXCheckbox.h */,
+				68B9F9261373404D00B912F6 /* MXCheckbox.m */,
+			);
+			name = MXCheckbox;
+			sourceTree = "<group>";
+		};
+		68B9F980137345F500B912F6 /* MXTableView */ = {
+			isa = PBXGroup;
+			children = (
+				689B86BB137E7BBA00D4A160 /* MXTableSectionHeader */,
+				68B9F981137345FC00B912F6 /* MXTableViewCell */,
+				68B9F9851373461F00B912F6 /* MXTableView.h */,
+				68B9F9861373461F00B912F6 /* MXTableView.m */,
+			);
+			name = MXTableView;
+			sourceTree = "<group>";
+		};
+		68B9F981137345FC00B912F6 /* MXTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				68B9F9821373461700B912F6 /* MXTableViewCell.h */,
+				68B9F9831373461700B912F6 /* MXTableViewCell.m */,
+			);
+			name = MXTableViewCell;
+			sourceTree = "<group>";
+		};
+		68CF6C10138707CC00B77AEF /* MXRenderManager */ = {
+			isa = PBXGroup;
+			children = (
+				68CF6C11138707DE00B77AEF /* MXRenderManager.h */,
+				68CF6C12138707DE00B77AEF /* MXRenderManager.m */,
+			);
+			name = MXRenderManager;
+			sourceTree = "<group>";
+		};
+		68CF6C2A13870AD100B77AEF /* RPC */ = {
+			isa = PBXGroup;
+			children = (
+				68CF6D221387C1DB00B77AEF /* MigServer */,
+				68CF6C2B13870AE600B77AEF /* MXRemoteProcedureCalls.h */,
+				68CF6C2C13870AE600B77AEF /* MXRemoteProcedureCalls.m */,
+			);
+			name = RPC;
+			sourceTree = "<group>";
+		};
+		68CF6D221387C1DB00B77AEF /* MigServer */ = {
+			isa = PBXGroup;
+			children = (
+				680D63AC139ADF3A00B30370 /* MobileXRPC.h */,
+				680D63AD139ADF3A00B30370 /* MXRPCClient.m */,
+				680D63AE139ADF3A00B30370 /* MXRPCMigServer.m */,
+				68CF6D231387C21300B77AEF /* MXRPCCommon.h */,
+			);
+			name = MigServer;
+			sourceTree = "<group>";
+		};
+		68CF6E6A1387E72A00B77AEF /* CPMIGServerSource */ = {
+			isa = PBXGroup;
+			children = (
+				68CF6E6C1387E74200B77AEF /* CPMIGServerSource.h */,
+				68CF6E6D1387E74200B77AEF /* CPMIGServerSource.m */,
+			);
+			name = CPMIGServerSource;
+			sourceTree = "<group>";
+		};
+		68CF702E138824D100B77AEF /* MXApplicationStateServices */ = {
+			isa = PBXGroup;
+			children = (
+				68CF70361388265A00B77AEF /* MXApplicationStateServices.h */,
+				68CF70371388265A00B77AEF /* MXApplicationStateServices.m */,
+			);
+			name = MXApplicationStateServices;
+			sourceTree = "<group>";
+		};
+		68CF704B13882D4800B77AEF /* MXApplication+PerAppSettings */ = {
+			isa = PBXGroup;
+			children = (
+				68CF704C13882D5B00B77AEF /* MXApplication+PerAppSettings.h */,
+				68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */,
+			);
+			name = "MXApplication+PerAppSettings";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1D6058900D05DD3D006BFB54 /* MobileX */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MobileX" */;
+			buildPhases = (
+				6810FB7E1200AB0600B3E2C3 /* Resources */,
+				1D60588E0D05DD3D006BFB54 /* Sources */,
+				1D60588F0D05DD3D006BFB54 /* Frameworks */,
+				6810FB6C1200A84500B3E2C3 /* Run Script */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MobileX;
+			productName = ind;
+			productReference = 1D6058910D05DD3D006BFB54 /* MobileX */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		29B97313FDCFA39411CA2CEA /* Project object */ = {
+			isa = PBXProject;
+			buildConfigurationList = C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MobileX" */;
+			compatibilityVersion = "Xcode 3.1";
+			developmentRegion = English;
+			hasScannedForEncodings = 1;
+			knownRegions = (
+				English,
+				Japanese,
+				French,
+				German,
+				en,
+			);
+			mainGroup = 29B97314FDCFA39411CA2CEA /* CustomTemplate */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1D6058900D05DD3D006BFB54 /* MobileX */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6810FB7E1200AB0600B3E2C3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6810FB801200AB1700B3E2C3 /* Info.plist in Resources */,
+				687B8FA0136E499D009D1D64 /* CHANGELOG in Resources */,
+				686BF9731389119E004B6DF1 /* UIKIT in Resources */,
+				686BFADB13892DB9004B6DF1 /* UIKIT-RESUME-TRACE in Resources */,
+				01936FA814995AB4001B31EC /* LEGACY_MT in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6810FB6C1200A84500B3E2C3 /* Run Script */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Run Script";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "python /Volumes/Data/lib/Developer/Python/BuildTool/main.py";
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		1D60588E0D05DD3D006BFB54 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				1D60589B0D05DD56006BFB54 /* MobileX.m in Sources */,
+				684A7A8A1362FA9E00B4F68C /* MXController.m in Sources */,
+				684A7A931362FBCA00B4F68C /* MXMainLayer.m in Sources */,
+				684A7AA21362FD6A00B4F68C /* MXColors.m in Sources */,
+				684A7AFF1362FFF500B4F68C /* MXText.m in Sources */,
+				684A7B071363009C00B4F68C /* MXCG.m in Sources */,
+				684A7B9C13630B1400B4F68C /* CALayer+MX.m in Sources */,
+				684A7C581363261F00B4F68C /* MXImageLayer.m in Sources */,
+				684A7CD013632EE600B4F68C /* MXHIDController.m in Sources */,
+				684A7E0513634A4300B4F68C /* MXUIController.m in Sources */,
+				684A7E0913634AC900B4F68C /* MXController+Internal.m in Sources */,
+				684A7E1913634B7B00B4F68C /* MXController+EventHandling.m in Sources */,
+				684A7EF61363514200B4F68C /* MXIcon.m in Sources */,
+				684A80141363638000B4F68C /* MXApplication.m in Sources */,
+				684A8017136363A600B4F68C /* MXLaunchdUtilities.m in Sources */,
+				684A801A136363B000B4F68C /* MXBundle.m in Sources */,
+				684A80381363652100B4F68C /* SBSpringBoardServicesMachServer.m in Sources */,
+				684A80471363658100B4F68C /* MXApplicationController.m in Sources */,
+				6857266B136370B700BEEA8B /* MXWindow.m in Sources */,
+				68572940136445FE00BEEA8B /* MXControl.m in Sources */,
+				68572A0E1364508D00BEEA8B /* MXButton.m in Sources */,
+				68572A881364624200BEEA8B /* MXPane.m in Sources */,
+				68572A97136463AF00BEEA8B /* MXTaskbar.m in Sources */,
+				68572AA01364646D00BEEA8B /* MXTaskbarItem.m in Sources */,
+				68572B3A13646C2900BEEA8B /* MXTaskbarIconItem.m in Sources */,
+				68572BA1136474C200BEEA8B /* MXPaneManager.m in Sources */,
+				68572BE91364797B00BEEA8B /* MXImage.m in Sources */,
+				68572C5A1364930C00BEEA8B /* MXPanePreview.m in Sources */,
+				68572DBB1364BAFD00BEEA8B /* MXTaskbarPanePreviewItem.m in Sources */,
+				68572E311364C08F00BEEA8B /* MXRenderLayer.m in Sources */,
+				68572E7C1364C3F600BEEA8B /* MXUIKitSharedImageServer.mm in Sources */,
+				68572F321364D5F800BEEA8B /* MXLayerHost.m in Sources */,
+				685730F91364F9B700BEEA8B /* MXWindowButton.m in Sources */,
+				685732181365710500BEEA8B /* MXPlatformController.m in Sources */,
+				68524A001366069B007BE5B3 /* MXIconImage.m in Sources */,
+				68B20A55136AE423000793AE /* MXUIDrawing.m in Sources */,
+				68B20C7C136B9305000793AE /* MXIOTools.m in Sources */,
+				68B20D9F136C66A2000793AE /* MXProcess.m in Sources */,
+				68B20EDA136CA0B8000793AE /* POSIXTask.m in Sources */,
+				687B8BE1136DB6DE009D1D64 /* MXDevice.m in Sources */,
+				687B8C17136DCABF009D1D64 /* NSDictionary+BOOL.m in Sources */,
+				687B8D78136DF63C009D1D64 /* MXLog.m in Sources */,
+				68954151136ED94A00968296 /* MXHostWindow.m in Sources */,
+				68954273136F10D000968296 /* MXWindow+Drawing.m in Sources */,
+				68954296136F12E600968296 /* MXWindow+Frame.m in Sources */,
+				68232E65136F8A2E005AAA65 /* MXGestureRecognizer.m in Sources */,
+				68232E6B136F8B6F005AAA65 /* MXMultitouchHandler.m in Sources */,
+				68232FBE1371C79E005AAA65 /* MXSettingsController.m in Sources */,
+				682331211372FB10005AAA65 /* MXApplicationIcon.m in Sources */,
+				682331391372FB85005AAA65 /* MXIconController.m in Sources */,
+				6823313A1372FB85005AAA65 /* MXIconListLayer.m in Sources */,
+				6823313B1372FB85005AAA65 /* MXIconScrollLayer.m in Sources */,
+				682331421372FBB6005AAA65 /* MXDesktopController.m in Sources */,
+				682331501372FC0B005AAA65 /* MXWallpaperLayer.m in Sources */,
+				682331551372FC2A005AAA65 /* MXDesktopLayer.m in Sources */,
+				682331721372FD47005AAA65 /* MXScrollLayer.m in Sources */,
+				68B9F9271373404D00B912F6 /* MXCheckbox.m in Sources */,
+				68B9F9841373461700B912F6 /* MXTableViewCell.m in Sources */,
+				68B9F9871373461F00B912F6 /* MXTableView.m in Sources */,
+				683D4E0913753F7E0044480D /* MXBoundScrollLayer.m in Sources */,
+				683D503613756A050044480D /* MXScroller.m in Sources */,
+				683D58611376BF130044480D /* MXFont.m in Sources */,
+				683D59FB13773B350044480D /* MXMenu.m in Sources */,
+				683D5A5213773F470044480D /* MXMenuItem.m in Sources */,
+				689B8517137BDFC700D4A160 /* MXBasicAnimation.m in Sources */,
+				689B86BE137E7BEC00D4A160 /* MXTableSectionHeader.m in Sources */,
+				689B8765137E84B600D4A160 /* MXLayer.m in Sources */,
+				689B8852137E91F100D4A160 /* MXDashboardLayer.m in Sources */,
+				689B88ED137E979D00D4A160 /* MXScreenCapture.m in Sources */,
+				689B89B2137EAAA300D4A160 /* MXDashboardController.m in Sources */,
+				689B8D12137EEFD800D4A160 /* MXQuartzWindowServer.m in Sources */,
+				689B8D55137EF4B800D4A160 /* MXTesting.m in Sources */,
+				689B8EB9137F12CB00D4A160 /* MXSleepController.m in Sources */,
+				689B8EF0137F1CA300D4A160 /* MXPreferencesWindowController.m in Sources */,
+				689B9049137FC69C00D4A160 /* MXSBInitialization.m in Sources */,
+				689B9130137FE5D200D4A160 /* MXClippedImageLayer.m in Sources */,
+				687B9FA11381BEEC00880185 /* MXExposeLayer.m in Sources */,
+				685956531384078E007750FD /* MXPortCache.m in Sources */,
+				685956A513841306007750FD /* MXCloseCross.m in Sources */,
+				68595778138421BC007750FD /* MXPaneManager+Expose.m in Sources */,
+				6859587B13843A0F007750FD /* MXFolder.m in Sources */,
+				6814E86713845D3C005205E5 /* MXFolderIcon.m in Sources */,
+				6814E8DD138462E8005205E5 /* MXPaneManager+Reveal.m in Sources */,
+				68CF6C13138707DE00B77AEF /* MXRenderManager.m in Sources */,
+				68CF6C2D13870AE600B77AEF /* MXRemoteProcedureCalls.m in Sources */,
+				68CF6E6E1387E74200B77AEF /* CPMIGServerSource.m in Sources */,
+				68CF70381388265A00B77AEF /* MXApplicationStateServices.m in Sources */,
+				68CF704E13882D5B00B77AEF /* MXApplication+PerAppSettings.m in Sources */,
+				686BF98513891690004B6DF1 /* CPMIGProbing.m in Sources */,
+				686BFAE013892FB8004B6DF1 /* MXUIStatusBarServer.m in Sources */,
+				68B1729B138EB42E007F7431 /* IOFlashStorage.m in Sources */,
+				68CDAF521395AD6800CB09E7 /* SpringBoardServicesServer.m in Sources */,
+				68CDB0B3139646A800CB09E7 /* MXUIStatusBarMiGServer.m in Sources */,
+				680D63AF139ADF3A00B30370 /* MXRPCClient.m in Sources */,
+				680D63B0139ADF3B00B30370 /* MXRPCMigServer.m in Sources */,
+				688D039413A1078C00AEC2BB /* MXIPCSupport.m in Sources */,
+				01C17E331481236C00316325 /* uiKitProxy.m in Sources */,
+				016A0B4E148A8446007E6F5A /* ImageLoaderMachO.mm in Sources */,
+				017C7FAC14AE742F003F175D /* legacyUiSharedImageServer.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		1D6058940D05DD3E006BFB54 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MobileX_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MobileX;
+				SDKROOT = iphoneos.internal;
+				WRAPPER_EXTENSION = "";
+			};
+			name = Debug;
+		};
+		1D6058950D05DD3E006BFB54 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = YES;
+				COPY_PHASE_STRIP = YES;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SDKROOT)$(SYSTEM_LIBRARY_DIR)/PrivateFrameworks\"",
+				);
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_INPUT_FILETYPE = automatic;
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = MobileX_Prefix.pch;
+				GCC_VERSION = com.apple.compilers.llvmgcc42;
+				INFOPLIST_FILE = "";
+				MACH_O_TYPE = mh_execute;
+				PRODUCT_NAME = MobileX;
+				SDKROOT = iphoneos.internal;
+				VALIDATE_PRODUCT = NO;
+				WRAPPER_EXTENSION = "";
+			};
+			name = Release;
+		};
+		C01FCF4F08A954540054247B /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				MACH_O_TYPE = mh_execute;
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0.internal;
+			};
+			name = Debug;
+		};
+		C01FCF5008A954540054247B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
+				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
+				GCC_C_LANGUAGE_STANDARD = c99;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				INFOPLIST_EXPAND_BUILD_SETTINGS = YES;
+				INFOPLIST_FILE = "";
+				INFOPLIST_OUTPUT_FORMAT = xml;
+				MACH_O_TYPE = mh_execute;
+				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PREBINDING = NO;
+				SDKROOT = iphoneos4.0.internal;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		1D6058960D05DD3E006BFB54 /* Build configuration list for PBXNativeTarget "MobileX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1D6058940D05DD3E006BFB54 /* Debug */,
+				1D6058950D05DD3E006BFB54 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C01FCF4E08A954540054247B /* Build configuration list for PBXProject "MobileX" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C01FCF4F08A954540054247B /* Debug */,
+				C01FCF5008A954540054247B /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 29B97313FDCFA39411CA2CEA /* Project object */;
+}

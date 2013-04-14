@@ -1,0 +1,85 @@
+subsystem SpringBoardServices 2000000;
+
+#include <mach/std_types.defs>
+#include <mach/mach_types.defs>
+
+import "SpringBoardServices_Common.h";
+serverprefix _SBXX;
+//Types
+type string_t = c_string[*:1024];
+
+routine AppWillOrderInContext(
+            server : mach_port_t;
+            context   : unsigned;
+			windowLevel : float;
+			windowOutput : int;
+ServerAuditToken			token : audit_token_t
+			); //0
+			
+			
+routine AppDidOrderOutContext(
+            server : mach_port_t;
+            context   : unsigned;
+ServerAuditToken		token : audit_token_t
+			); //1
+            
+Skip;//2
+			
+type t_cgsize = struct[2] of float;
+
+routine		LaunchApplicationWithIdentifier(
+					server : mach_port_t;
+					unk0 : int; //FUCK YEAH, PADDING!
+					unk1 : int;
+					unk2 : int;
+					unk3 : int;
+					unk4 : int;
+					unk5 : int;
+					unk6 : int;
+				    identifier: string_t;
+					suspended   : boolean_t;
+					url: int;
+ServerAuditToken		token : audit_token_t
+					);//3
+
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;
+
+//22
+routine RegisterStatusBarWindowContextId(
+					server : mach_port_t;
+					context   : unsigned;
+ServerAuditToken		token : audit_token_t
+					);
+
+Skip;Skip;Skip;Skip;Skip;
+
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;Skip;
+
+//118
+routine CheckInTaskPort(
+		server : mach_port_t;
+		one : int;
+		two : int;
+		thr : int;
+		fr : int;
+ServerAuditToken		token : audit_token_t
+		);
+		
+Skip;//119
+
+//120
+routine RegisterRemoteView(
+		server : mach_port_t;
+		one : int;
+		two : int;
+ServerAuditToken		token : audit_token_t
+		);
