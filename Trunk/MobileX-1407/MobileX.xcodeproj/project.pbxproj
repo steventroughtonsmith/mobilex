@@ -11,14 +11,11 @@
 		017C7FAC14AE742F003F175D /* legacyUiSharedImageServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C7FAB14AE742F003F175D /* legacyUiSharedImageServer.m */; };
 		017C7FE614AF3854003F175D /* MXSystemMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C7FE514AF3854003F175D /* MXSystemMenu.m */; };
 		017C801E14AF8F84003F175D /* WifiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C801D14AF8F83003F175D /* WifiManager.m */; };
-		017C802014AF8FF0003F175D /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 017C801F14AF8FF0003F175D /* MobileWiFi.framework */; };
 		017C802D14AFBCCA003F175D /* libvncserver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017C802C14AFBCCA003F175D /* libvncserver.a */; };
 		017C803114AFBDA8003F175D /* MXVNCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C803014AFBDA7003F175D /* MXVNCController.m */; };
-		017C803B14AFCD5B003F175D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 017C803A14AFCD5A003F175D /* libz.dylib */; };
 		017C808914B12B4E003F175D /* coreAnimationPatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017C808814B12B4C003F175D /* coreAnimationPatcher.mm */; };
 		017C808C14B130C2003F175D /* coreAnimationFixes.s in Sources */ = {isa = PBXBuildFile; fileRef = 017C808B14B130C1003F175D /* coreAnimationFixes.s */; };
 		01936FA814995AB4001B31EC /* LEGACY_MT in Resources */ = {isa = PBXBuildFile; fileRef = 01936FA714995AB4001B31EC /* LEGACY_MT */; };
-		01C17E2614810EF500316325 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 01C17E2514810EF500316325 /* UIKit.framework */; settings = {ATTRIBUTES = (Weak, ); }; };
 		01C17E331481236C00316325 /* uiKitProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C17E321481236C00316325 /* uiKitProxy.m */; };
 		1D60589B0D05DD56006BFB54 /* MobileX.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* MobileX.m */; };
 		680D63AF139ADF3A00B30370 /* MXRPCClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 680D63AD139ADF3A00B30370 /* MXRPCClient.m */; };
@@ -128,6 +125,9 @@
 		68CF6E6E1387E74200B77AEF /* CPMIGServerSource.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF6E6D1387E74200B77AEF /* CPMIGServerSource.m */; };
 		68CF70381388265A00B77AEF /* MXApplicationStateServices.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF70371388265A00B77AEF /* MXApplicationStateServices.m */; };
 		68CF704E13882D5B00B77AEF /* MXApplication+PerAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */; };
+		B0207123171B47BB00B8ECCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207122171B47BB00B8ECCC /* UIKit.framework */; };
+		B0207125171B47C000B8ECCC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207124171B47C000B8ECCC /* libz.dylib */; };
+		B0207127171B47DF00B8ECCC /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207126171B47DF00B8ECCC /* MobileWiFi.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -140,7 +140,6 @@
 		017C801914AF8F10003F175D /* MobileWiFi.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileWiFi.h; sourceTree = "<group>"; };
 		017C801C14AF8F83003F175D /* WifiManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiManager.h; sourceTree = "<group>"; };
 		017C801D14AF8F83003F175D /* WifiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiManager.m; sourceTree = "<group>"; };
-		017C801F14AF8FF0003F175D /* MobileWiFi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileWiFi.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.internal.sdk/System/Library/PrivateFrameworks/MobileWiFi.framework; sourceTree = DEVELOPER_DIR; };
 		017C802514AFBCCA003F175D /* keysym.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = keysym.h; sourceTree = "<group>"; };
 		017C802614AFBCCA003F175D /* rfb.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfb.h; sourceTree = "<group>"; };
 		017C802714AFBCCA003F175D /* rfbclient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = rfbclient.h; sourceTree = "<group>"; };
@@ -151,15 +150,13 @@
 		017C802C14AFBCCA003F175D /* libvncserver.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libvncserver.a; sourceTree = "<group>"; };
 		017C802F14AFBDA7003F175D /* MXVNCController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MXVNCController.h; sourceTree = "<group>"; };
 		017C803014AFBDA7003F175D /* MXVNCController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXVNCController.m; sourceTree = "<group>"; };
-		017C803A14AFCD5A003F175D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.internal.sdk/usr/lib/libz.dylib; sourceTree = DEVELOPER_DIR; };
 		017C808714B12B4B003F175D /* coreAnimationPatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = coreAnimationPatcher.h; sourceTree = "<group>"; };
 		017C808814B12B4C003F175D /* coreAnimationPatcher.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = coreAnimationPatcher.mm; sourceTree = "<group>"; };
 		017C808B14B130C1003F175D /* coreAnimationFixes.s */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.asm; path = coreAnimationFixes.s; sourceTree = "<group>"; };
 		01936FA714995AB4001B31EC /* LEGACY_MT */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LEGACY_MT; sourceTree = "<group>"; };
-		01C17E2514810EF500316325 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS5.0.internal.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
 		01C17E311481236C00316325 /* uiKitProxy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = uiKitProxy.h; sourceTree = "<group>"; };
 		01C17E321481236C00316325 /* uiKitProxy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = uiKitProxy.m; sourceTree = "<group>"; };
-		1D6058910D05DD3D006BFB54 /* MobileX */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MobileX; sourceTree = BUILT_PRODUCTS_DIR; };
+		1D6058910D05DD3D006BFB54 /* MobileX. */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MobileX.; sourceTree = BUILT_PRODUCTS_DIR; };
 		29B97316FDCFA39411CA2CEA /* MobileX.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MobileX.m; sourceTree = "<group>"; };
 		680D63AC139ADF3A00B30370 /* MobileXRPC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileXRPC.h; sourceTree = "<group>"; };
 		680D63AD139ADF3A00B30370 /* MXRPCClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MXRPCClient.m; sourceTree = "<group>"; };
@@ -378,6 +375,9 @@
 		68CF704C13882D5B00B77AEF /* MXApplication+PerAppSettings.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "MXApplication+PerAppSettings.h"; sourceTree = "<group>"; };
 		68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "MXApplication+PerAppSettings.m"; sourceTree = "<group>"; };
 		68F3245212116E22003E12B2 /* MobileX_Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MobileX_Prefix.pch; sourceTree = "<group>"; };
+		B0207122171B47BB00B8ECCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		B0207124171B47C000B8ECCC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		B0207126171B47DF00B8ECCC /* MobileWiFi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileWiFi.framework; path = System/Library/PrivateFrameworks/MobileWiFi.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -385,9 +385,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				017C803B14AFCD5B003F175D /* libz.dylib in Frameworks */,
-				017C802014AF8FF0003F175D /* MobileWiFi.framework in Frameworks */,
-				01C17E2614810EF500316325 /* UIKit.framework in Frameworks */,
+				B0207127171B47DF00B8ECCC /* MobileWiFi.framework in Frameworks */,
+				B0207125171B47C000B8ECCC /* libz.dylib in Frameworks */,
+				B0207123171B47BB00B8ECCC /* UIKit.framework in Frameworks */,
 				68685DCC133DF4A600AFEED6 /* Foundation.framework in Frameworks */,
 				684A7A701362F9C000B4F68C /* QuartzCore.framework in Frameworks */,
 				684A7AB31362FDE000B4F68C /* CoreGraphics.framework in Frameworks */,
@@ -476,7 +476,7 @@
 		19C28FACFE9D520D11CA2CBB /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				1D6058910D05DD3D006BFB54 /* MobileX */,
+				1D6058910D05DD3D006BFB54 /* MobileX. */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -484,8 +484,6 @@
 		29B97314FDCFA39411CA2CEA /* CustomTemplate */ = {
 			isa = PBXGroup;
 			children = (
-				017C803A14AFCD5A003F175D /* libz.dylib */,
-				017C801F14AF8FF0003F175D /* MobileWiFi.framework */,
 				684A7CB213632E5400B4F68C /* Main */,
 				29B97315FDCFA39411CA2CEA /* Sources */,
 				686BF9711389118A004B6DF1 /* Documentation */,
@@ -511,7 +509,9 @@
 		29B97323FDCFA39411CA2CEA /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				01C17E2514810EF500316325 /* UIKit.framework */,
+				B0207126171B47DF00B8ECCC /* MobileWiFi.framework */,
+				B0207124171B47C000B8ECCC /* libz.dylib */,
+				B0207122171B47BB00B8ECCC /* UIKit.framework */,
 				6899232013A15DB500DFB044 /* IOMobileFramebuffer.framework */,
 				689B847B137BCA9400D4A160 /* CoreTelephony.framework */,
 				685727711363937800BEEA8B /* ImageIO.framework */,
@@ -1701,7 +1701,6 @@
 				6810FB7E1200AB0600B3E2C3 /* Resources */,
 				1D60588E0D05DD3D006BFB54 /* Sources */,
 				1D60588F0D05DD3D006BFB54 /* Frameworks */,
-				6810FB6C1200A84500B3E2C3 /* Run Script */,
 			);
 			buildRules = (
 			);
@@ -1709,8 +1708,8 @@
 			);
 			name = MobileX;
 			productName = ind;
-			productReference = 1D6058910D05DD3D006BFB54 /* MobileX */;
-			productType = "com.apple.product-type.tool";
+			productReference = 1D6058910D05DD3D006BFB54 /* MobileX. */;
+			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
 
@@ -1751,23 +1750,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		6810FB6C1200A84500B3E2C3 /* Run Script */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "Run Script";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "python /Volumes/Data/lib/Developer/Python/BuildTool/main.py";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		1D60588E0D05DD3D006BFB54 /* Sources */ = {
@@ -1899,6 +1881,7 @@
 				GCC_PREFIX_HEADER = MobileX_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1906,7 +1889,7 @@
 				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = MobileX;
-				SDKROOT = iphoneos.internal;
+				SDKROOT = iphoneos6.1;
 				WRAPPER_EXTENSION = "";
 			};
 			name = Debug;
@@ -1926,6 +1909,7 @@
 				GCC_PREFIX_HEADER = MobileX_Prefix.pch;
 				GCC_VERSION = com.apple.compilers.llvmgcc42;
 				INFOPLIST_FILE = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				LIBRARY_SEARCH_PATHS = (
 					"$(inherited)",
 					"\"$(SRCROOT)\"",
@@ -1933,7 +1917,7 @@
 				);
 				MACH_O_TYPE = mh_execute;
 				PRODUCT_NAME = MobileX;
-				SDKROOT = iphoneos.internal;
+				SDKROOT = iphoneos6.1;
 				VALIDATE_PRODUCT = NO;
 				WRAPPER_EXTENSION = "";
 			};
@@ -1943,7 +1927,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
@@ -1961,7 +1944,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ARCHS = "$(ARCHS_STANDARD_32_BIT)";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "Don't Code Sign";
 				CODE_SIGN_RESOURCE_RULES_PATH = "$(SDKROOT)/ResourceRules.plist";
 				GCC_C_LANGUAGE_STANDARD = c99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
