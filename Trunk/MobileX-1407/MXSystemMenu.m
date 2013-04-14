@@ -233,8 +233,12 @@ static Item* gSelectedItem = NULL;
 	self.position = CGPointMake(mainLayer.frame.size.width/2, self.position.y);
 }
 
+
 - (void) sendKey:(uint32_t)page isDown:(boolean_t)down {
-	if (!down) {
+	
+   
+    
+    if (!down) {
 		if (page == kAtvBtnUp) {
 			int32_t newIndex = _index - 1;
 			if (newIndex >= 0) {
@@ -255,16 +259,22 @@ static Item* gSelectedItem = NULL;
 			}
 		}
 		else if (page == kAtvBtnMenu) {
-			if ([_currentItemSetName isEqualToString:@"root"]) {
-				[self hide];
-			}
-			else if ([_currentItemSetName isEqualToString:@"___hidden"]) {
-				[self show];
-			}
-			else {
-				[self loadItemSet:@"root"];
-			}
-		}
+            
+            
+            if ([_currentItemSetName isEqualToString:@"root"]) {
+                [self hide];
+            }
+            else if ([_currentItemSetName isEqualToString:@"___hidden"]) {
+
+               [self show];
+                
+            }
+            else {
+                [self loadItemSet:@"root"];
+            }
+            
+        }
+		
 	}
 }
 
@@ -365,11 +375,11 @@ static Item* gSelectedItem = NULL;
 		_wifiScanning = TRUE;
 		
 		[self _redoWifiItemSet];
-		 
-		 [[WifiManager sharedInstance] setWifiEnabled:TRUE];
-		 [[WifiManager sharedInstance] scan];
+        
+        [[WifiManager sharedInstance] setWifiEnabled:TRUE];
+        [[WifiManager sharedInstance] scan];
 	}
-		 
+    
 	[self loadItemSet:@"wifi"];
 }
 
@@ -391,7 +401,7 @@ static Item* gSelectedItem = NULL;
 	/*** root itemset ***/
 	set = 
 	[[ItemSet alloc] init];
-
+    
 	item =
 	[[StaticItem alloc] initWithFrame:CGRectMake(0, 0, 0, 80)];
 	[item setText:@"Main Menu"];
@@ -414,7 +424,7 @@ static Item* gSelectedItem = NULL;
 	
 	[set.items addObject:item];
 	[item release];
-
+    
 	item =
 	[[Item alloc] initWithFrame:CGRectMake(0, 0, 0, 80)];
 	[item setText:@"Pop Window"];
@@ -472,7 +482,7 @@ static Item* gSelectedItem = NULL;
 		[self setZPosition:10000000];
 		
 		_itemSets = [[NSMutableDictionary alloc] initWithCapacity:10];
-
+        
 		[self _addItemSets];
 		[self loadItemSet:@"root"];
 		_currentItemSetName = @"___hidden";

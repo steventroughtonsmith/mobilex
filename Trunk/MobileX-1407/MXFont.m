@@ -15,7 +15,13 @@ static NSDictionary* _fontCache = NULL;
 {
 	NSAutoreleasePool* pool = [[NSAutoreleasePool alloc] init];
 	
+#if TARGET_CPU_ARM
 	NSString* scanPath = @"/System/Library/Fonts/Cache/";
+	
+#else
+	NSString* scanPath = @"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/System/Library/Fonts/Cache";
+
+#endif
 	NSArray* fileList = [[NSFileManager defaultManager] contentsOfDirectoryAtPath:scanPath
 																			error:nil];
 	NSMutableDictionary* cache = [NSMutableDictionary new];

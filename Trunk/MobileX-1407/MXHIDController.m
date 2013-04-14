@@ -41,19 +41,47 @@ void MXHIDHandleACEvent(IOHIDEventRef event)
 
 #import <notify.h>
 #import "MXSystemMenu.h"
+
+int menuButtonTickCount = 0;
+
 void directButtonEvent(uint32_t usage, boolean_t is_down) {
-	
-	if (![[MXSystemMenu shared] isOpen]) {
-		char* buffer = calloc(1, 40);
-		sprintf(buffer, "com.mx.atvbutton_%d_%d",usage,is_down);
-		
-		notify_post(buffer);
-		
-		free(buffer);
-	}
+    
+    
+    if (![[MXSystemMenu shared] isOpen]) {
+        char* buffer = calloc(1, 40);
+        sprintf(buffer, "com.mx.atvbutton_%d_%d",usage,is_down);
+        
+        notify_post(buffer);
+        
+        free(buffer);
+    }
+    
+    
+    if (usage == kAtvBtnMenu)
+    {
+//        NSLog(@"TickCount = %i", menuButtonTickCount);
+        
+        if (is_down)
+            menuButtonTickCount++;
+        else
+            menuButtonTickCount = 0;
+    }
+    
 	
 	/* notify system menu */
-	[[MXSystemMenu shared] sendKey:usage isDown:is_down];
+    
+//    if (menuButtonTickCount >= 5)
+//    {
+//        [[MXSystemMenu shared] sendKey:usage isDown:is_down];
+//
+//    }
+   
+    
+    if (1)
+    {
+        [[MXSystemMenu shared] sendKey:usage isDown:is_down];
+        
+    }
 }
 
 void MXHIDHandleKBEvent(IOHIDEventRef event)
@@ -84,7 +112,7 @@ void MXHIDHandleKBEvent(IOHIDEventRef event)
 	
 	switch (IOHIDEventGetIntegerValue(event, kIOHIDEventFieldKeyboardUsage))
 	{
-		/* H1Buttons */
+            /* H1Buttons */
 		case kDevBtnHome: /* Home button */
 			//record.type = isDown ? kGSEventMenuButtonDown : kGSEventMenuButtonUp;
 			directButtonEvent(kAtvBtnSelect, isDown);
@@ -176,7 +204,7 @@ void hid_convertForPosition(CGPoint pos, mach_port_t* port, CGPoint* finalPositi
 		 * Fuck everything about this.
 		 */
 		position = [_mainDisplay convertPoint:position toContextId:context];
-	
+        
 	}
 	else {
 		if (port != NULL)
@@ -346,7 +374,7 @@ void hid_handleMultitouchEvent(IOHIDEventRef event)
 void MXHIDHandleMTEvent (IOHIDEventRef event)
 {
 	/* legacy multitouch code
-	   (leaks memory)
+     (leaks memory)
 	 */
 	
 	CFArrayRef eventChildren = IOHIDEventGetChildren(event);
@@ -437,7 +465,7 @@ void MXHIDHandleMTEvent (IOHIDEventRef event)
 					else {
 						port = 0;
 					}
-
+                    
 					
 					location.x = location.x / MXScale();
 					location.y = location.y / MXScale();
@@ -448,7 +476,7 @@ void MXHIDHandleMTEvent (IOHIDEventRef event)
 					
 					if (_debugHidMultitouch)
 						MSLog(@"       identity %d flags %d touch %d mask %d x %f y %f z %f pressure %f majorRadius: %f",event_ident,event_flags,event_touch,event_mask,event_x,event_y,event_z,event_pressure,major_radius);
-			
+                    
 					
 					if (i == 0) {
 						event_struct->record.windowLocation = location;
@@ -499,11 +527,11 @@ void MXHIDHandleMTEvent (IOHIDEventRef event)
 						else {
 							return;
 						}
-
+                        
 						event_struct->data.pathInfosCount = eventChildrenCount;
 						event_struct->record.infoSize = infoSize;
 					}
-				
+                    
 					/* work out the pathInfo offset */
 					void* memOffset = (((char*)event_struct) + sizeof(*event_struct)) + ((int)(sizeof(GSPathInfo)) * i);
 					GSPathInfo* pathInfo = (GSPathInfo*)memOffset;
@@ -517,7 +545,7 @@ void MXHIDHandleMTEvent (IOHIDEventRef event)
 					pathInfo->pathLocation.x = location.x;
 					pathInfo->pathLocation.y = location.y;
 				}
-	
+                
 			}
 			
 			if (port != 0)
@@ -572,7 +600,7 @@ void MXHIDHandleEvent (void* target, void* refcon, IOHIDServiceRef service, IOHI
 	else {
 		MSLog(@"Unknown HID event: %d",event_type);
 	}
-
+    
 	[pool release];
 }
 
@@ -587,6 +615,12 @@ IOHIDServiceRef MXHIDGetService(int UsagePage,int Usage)
 	
 	CFArrayRef servMatches = IOHIDEventSystemCopyMatchingServices(__hidSystem, services, NULL, NULL, NULL, NULL);
 	
+	if (servMatches == NULL)
+	{
+		MSLog(@"[MXHIDGetService] service doesn't exist for {%p, %p}", (void*)UsagePage, (void*)Usage);
+
+	}
+
 	assert(servMatches != NULL);
 	
 	MSLog(@"[hid] got iohid services for {%p, %p}, count %d", (void*)UsagePage, (void*)Usage, CFArrayGetCount(servMatches));
@@ -679,7 +713,7 @@ IOHIDEventSystemRef _MXHIDStartInternal(BOOL isEventPump)
 	}
 	
 	
-
+    
 	__hidSystem = IOHIDEventSystemCreate(kCFAllocatorDefault);
 	
 	if ([[[MXDevice currentDevice] model] hasPrefix:@"iPhone3"]) {
@@ -736,11 +770,12 @@ IOHIDEventSystemRef _MXHIDStartInternal(BOOL isEventPump)
 				return __hidSystem;
 			}
 			
+#if TARGET_CPU_ARM
 			/* Accelerometer report interval */
 			NSNumber* interval = [[NSNumber alloc] initWithInt:1000000];
 			IOHIDServiceSetProperty(MXHIDGetAccelerometerService(), CFSTR("ReportInterval"), interval);
 			[interval release];
-			
+#endif
 			//MXHIDSetDebugStateForService(MXHIDGetService(13, 12), TRUE);
 			hid_calibrateMultitouch();
 			

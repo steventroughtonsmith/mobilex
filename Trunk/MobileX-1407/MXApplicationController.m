@@ -50,7 +50,7 @@ static MXApplicationController* _sharedInstance = nil;
 		
 		for (NSString* b in bndls)
 		{
-			NSString* bPath = [[[NSBundle mainBundle] bundlePath] stringByAppendingPathComponent:b];
+			NSString* bPath = [[[[NSBundle mainBundle] bundlePath] stringByDeletingLastPathComponent] stringByAppendingPathComponent:b];
 			if ([[NSFileManager defaultManager] fileExistsAtPath:bPath])
 			{
 				[[MXApplicationController sharedInstance] loadApplicationBundleAtPath:bPath
@@ -297,7 +297,14 @@ seatbeltEnvironmentVariables:(NSDictionary*)sVars
 	[_applications removeAllObjects];
 
 	[self _loadBundleApplicationsIfNeeded];
+	
+#if TARGET_CPU_ARM
+	
 	[self _loadApplicationsDictionariesInDirectory:@"/Applications/" isSystem:TRUE];
+#else
+	[self _loadApplicationsDictionariesInDirectory:@"/Applications/Xcode.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator5.1.sdk/Applications/" isSystem:TRUE];
+
+#endif
 	[self _loadUserApps];
 }
 

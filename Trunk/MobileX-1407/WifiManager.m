@@ -28,6 +28,8 @@ static id _sharedInstance = NULL;
 }
 
 - (BOOL) wifiEnabled {
+	
+#if TARGET_CPU_ARM
 	CFNumberRef v = WiFiManagerClientCopyProperty(_wifiManager, CFSTR("AllowEnable"));
 	
 	BOOL r;
@@ -38,19 +40,28 @@ static id _sharedInstance = NULL;
 	}
 	
 	return r;
+	
+#else
+	return NO;
+#endif
 }
 
 - (void) setWifiEnabled:(BOOL)wifiEnabled {
+#if TARGET_CPU_ARM
+
 	WiFiManagerClientSetProperty(_wifiManager, CFSTR("AllowEnable"), wifiEnabled ? kCFBooleanTrue : kCFBooleanFalse);
+#endif
 }
 
 - (id)init
 {
     self = [super init];
     if (self) {
+
 		/* Allocate things */
 		_networks = [NSMutableArray new];
-		
+	#if TARGET_CPU_ARM
+	
         /* Start WiFi manager */
 		_wifiManager = WiFiManagerClientCreate(NULL);
 		
@@ -72,6 +83,7 @@ static id _sharedInstance = NULL;
 			MSLog(@"WiFi:XXX: No devices are available. Maybe the entitlements are missing?\n");
 			assert(devices != NULL && CFArrayGetCount(devices) > 0);
 		}
+#endif
     }
     
     return self;
@@ -85,10 +97,13 @@ static id _sharedInstance = NULL;
 }
 
 void JoinFinished(WiFiDeviceClientRef device, WiFiNetworkRef network, int error, int error2, void* refcon) {
+	
 	[(WifiManager*)refcon _joinComplete:error2 network:network];
 }
 
 - (void) joinNetwork:(NSDictionary*)network password:(NSString*)password {
+#if TARGET_CPU_ARM
+
 	WiFiNetworkRef net =
 	WiFiNetworkCreate(NULL, (CFDictionaryRef)network);
 	
@@ -98,9 +113,12 @@ void JoinFinished(WiFiDeviceClientRef device, WiFiNetworkRef network, int error,
 	
 	/* took me a while to realize that 'Associate' means 'Join'  */
 	WiFiDeviceClientAssociateAsync(_device, net, JoinFinished, self);
+#endif
 }
 
 - (void) _scanComplete:(CFArrayRef)networks {
+#if TARGET_CPU_ARM
+
 	if (networks == NULL)
 	{
 		MSLog(@"WiFi: (networks == NULL), ignoring scan results");
@@ -118,6 +136,7 @@ void JoinFinished(WiFiDeviceClientRef device, WiFiNetworkRef network, int error,
 	
 	[[NSNotificationCenter defaultCenter] postNotificationName:@"WifiManagerScanComplete"
 														object:nil];
+#endif
 }
 
 void ScanFinished(WiFiDeviceClientRef device, CFArrayRef networks, int error, void* refcon) {
@@ -126,6 +145,8 @@ void ScanFinished(WiFiDeviceClientRef device, CFArrayRef networks, int error, vo
 
 - (void) scan {
 	[_networks removeAllObjects];
+#if TARGET_CPU_ARM
+
 	
 	NSDictionary* scanDict = [NSDictionary dictionaryWithObjectsAndKeys:
 							  [NSNumber numberWithInt:14], @"SCAN_MERGE",
@@ -136,6 +157,7 @@ void ScanFinished(WiFiDeviceClientRef device, CFArrayRef networks, int error, vo
 							  nil];
 	
 	WiFiDeviceClientScanAsync(_device, (CFDictionaryRef)scanDict, ScanFinished, self);
+#endif
 }
 
 @end

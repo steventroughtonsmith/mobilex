@@ -91,6 +91,8 @@ extern NSString* kCAWindowServerOrientation_LandscapeLeft;
 {
 	_mainLayer = [[MXMainLayer layer] init];
 	
+#if TARGET_CPU_ARM
+	
 	if ([[[MXDevice currentDevice] model] hasPrefix:@"AppleTV"]) {
 		
 		for (CAWindowServerDisplay* ds in [[CAWindowServer server] displays]) {
@@ -106,7 +108,12 @@ extern NSString* kCAWindowServerOrientation_LandscapeLeft;
 		
 		CGSize res = [[MXSettingsController shared] screenResolution];
 		
-		[_mainLayer setFrame:CGRectMake(0, 0, res.width, res.height)];
+		res.width = 1280.0;
+		res.height = 720.0;
+		
+		[_mainLayer setFrame:CGRectMake(0, 0, 1280., 720.)];
+		
+		
 		[[MXDevice currentDevice] _announcedScreenSize:CGSizeMake(res.width,res.height)];
 	}
 	else {
@@ -114,6 +121,11 @@ extern NSString* kCAWindowServerOrientation_LandscapeLeft;
 		[_mainLayer setFrame:CGRectMake(0, 0, [clcd bounds].size.width, [clcd bounds].size.height)];
 		[[MXDevice currentDevice] _announcedScreenSize:[clcd bounds].size];
 	}
+#else
+	[_mainLayer setFrame:CGRectMake(0, 0, 768., 1024.)];
+	[[MXDevice currentDevice] _announcedScreenSize:CGSizeMake(768., 1024.)];
+
+#endif
 	
 	[_mainLayer setBackgroundColor:RGB(0.05,0.05,0.05)];
 	[_mainLayer removeAllAnimations];
@@ -192,6 +204,9 @@ void MXGSEvent(GSEventRef event)
 	/* Preinitialize controllers  */
 	[MXPlatformController shared];
 	
+#if !TARGET_CPU_ARM
+	_isUIKit = TRUE;
+#endif
 	if (!_isUIKit) {
 		/*
 		 * If we're running using UIKit, it 
@@ -210,7 +225,10 @@ void MXGSEvent(GSEventRef event)
 	GSInitialize();
 	GSEventInitialize(TRUE);
 	GSEventRegisterEventCallBack(MXGSEvent);
+
+	
 	MXHIDStart();
+
 	
 	[self _initializationFinished];
 	

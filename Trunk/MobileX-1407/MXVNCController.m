@@ -5,6 +5,7 @@
 //  Created by Nick on 31/12/2011.
 //  Copyright (c) 2011 __MyCompanyName__. All rights reserved.
 //
+#if TARGET_CPU_ARM
 
 #import "MXVNCController.h"
 #import "MXDevice.h"
@@ -403,3 +404,27 @@ static void kbdEvent(rfbBool down, rfbKeySym key, struct _rfbClientRec *cl)
 }
 
 @end
+
+#else
+
+
+#import "MXController.h"
+#import "MXVNCController.h"
+static id _shinst = NULL;
+
+@implementation MXVNCController
++ (id) shared
+{
+	if (_shinst==NULL)
+	{
+		_shinst = [MXVNCController alloc];
+		[_shinst init];
+	}
+	
+	return _shinst;
+}
+- (void) _updateVncScreen{};
+- (void) _startVncServer{};
+@end
+
+#endif

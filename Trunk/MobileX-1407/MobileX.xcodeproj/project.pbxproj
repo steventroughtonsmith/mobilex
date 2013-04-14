@@ -14,7 +14,6 @@
 		017C802D14AFBCCA003F175D /* libvncserver.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 017C802C14AFBCCA003F175D /* libvncserver.a */; };
 		017C803114AFBDA8003F175D /* MXVNCController.m in Sources */ = {isa = PBXBuildFile; fileRef = 017C803014AFBDA7003F175D /* MXVNCController.m */; };
 		017C808914B12B4E003F175D /* coreAnimationPatcher.mm in Sources */ = {isa = PBXBuildFile; fileRef = 017C808814B12B4C003F175D /* coreAnimationPatcher.mm */; };
-		017C808C14B130C2003F175D /* coreAnimationFixes.s in Sources */ = {isa = PBXBuildFile; fileRef = 017C808B14B130C1003F175D /* coreAnimationFixes.s */; };
 		01936FA814995AB4001B31EC /* LEGACY_MT in Resources */ = {isa = PBXBuildFile; fileRef = 01936FA714995AB4001B31EC /* LEGACY_MT */; };
 		01C17E331481236C00316325 /* uiKitProxy.m in Sources */ = {isa = PBXBuildFile; fileRef = 01C17E321481236C00316325 /* uiKitProxy.m */; };
 		1D60589B0D05DD56006BFB54 /* MobileX.m in Sources */ = {isa = PBXBuildFile; fileRef = 29B97316FDCFA39411CA2CEA /* MobileX.m */; };
@@ -127,7 +126,8 @@
 		68CF704E13882D5B00B77AEF /* MXApplication+PerAppSettings.m in Sources */ = {isa = PBXBuildFile; fileRef = 68CF704D13882D5B00B77AEF /* MXApplication+PerAppSettings.m */; };
 		B0207123171B47BB00B8ECCC /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207122171B47BB00B8ECCC /* UIKit.framework */; };
 		B0207125171B47C000B8ECCC /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207124171B47C000B8ECCC /* libz.dylib */; };
-		B0207127171B47DF00B8ECCC /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207126171B47DF00B8ECCC /* MobileWiFi.framework */; };
+		B0207127171B47DF00B8ECCC /* MobileWiFi.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0207126171B47DF00B8ECCC /* MobileWiFi.framework */; settings = {ATTRIBUTES = (Required, ); }; };
+		B0207129171B4E7C00B8ECCC /* MXLogo.png in Resources */ = {isa = PBXBuildFile; fileRef = B0207128171B4E7C00B8ECCC /* MXLogo.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -378,6 +378,7 @@
 		B0207122171B47BB00B8ECCC /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B0207124171B47C000B8ECCC /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		B0207126171B47DF00B8ECCC /* MobileWiFi.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileWiFi.framework; path = System/Library/PrivateFrameworks/MobileWiFi.framework; sourceTree = SDKROOT; };
+		B0207128171B4E7C00B8ECCC /* MXLogo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = MXLogo.png; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -540,6 +541,7 @@
 		6810FB7D1200AB0600B3E2C3 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				B0207128171B4E7C00B8ECCC /* MXLogo.png */,
 				6810FB7F1200AB1700B3E2C3 /* Info.plist */,
 			);
 			name = Resources;
@@ -1746,6 +1748,7 @@
 				686BF9731389119E004B6DF1 /* UIKIT in Resources */,
 				686BFADB13892DB9004B6DF1 /* UIKIT-RESUME-TRACE in Resources */,
 				01936FA814995AB4001B31EC /* LEGACY_MT in Resources */,
+				B0207129171B4E7C00B8ECCC /* MXLogo.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1857,7 +1860,6 @@
 				017C801E14AF8F84003F175D /* WifiManager.m in Sources */,
 				017C803114AFBDA8003F175D /* MXVNCController.m in Sources */,
 				017C808914B12B4E003F175D /* coreAnimationPatcher.mm in Sources */,
-				017C808C14B130C2003F175D /* coreAnimationFixes.s in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

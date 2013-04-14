@@ -39,10 +39,15 @@ MXRenderManagerPushContext(unsigned context,
 	MXHostWindow* host = NULL;
 	host = MXRenderManagerGetHostWindowForApplication(application);
 	
+    
+    
 	if (host != NULL) {
 		[[host renderLayer] pushContext:context
 							windowLevel:windowLevel
 						   windowOutput:windowOutput];
+       
+        if (host.isOffscreen)
+            [host animateOnscreen];
 	}
 			
 }

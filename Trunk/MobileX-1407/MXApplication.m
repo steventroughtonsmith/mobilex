@@ -315,8 +315,20 @@ return FALSE;\
 	}
 }
 
+#import <notify.h>
+
+
 - (void) commonExited
 {
+    
+    char* buffer = calloc(1, 40);
+    sprintf(buffer, "com.mx.applicationsuspend");
+    
+    notify_post(buffer);
+    
+    free(buffer);
+
+    
 	int exitSig = 0;
 	
 	if (!_isAnonymous)
@@ -344,10 +356,20 @@ return FALSE;\
 	GSSendSimpleEvent(type, [self eventPort]);
 }
 
+
 - (void) suspend
 {
 	MSLog(@"Suspending %@ ...",_bundleIdentifier);
 	
+    
+    char* buffer = calloc(1, 40);
+    sprintf(buffer, "com.mx.applicationsuspend");
+    
+    notify_post(buffer);
+    
+    free(buffer);
+
+    
 	GSEventSuspension event;
 	
 	memset(&event, 0, sizeof(event));
@@ -453,6 +475,14 @@ return FALSE;\
 
 - (void) activate
 {	
+    
+    char* buffer = calloc(1, 40);
+    sprintf(buffer, "com.mx.applicationactivate");
+    
+    notify_post(buffer);
+    
+    free(buffer);
+    
 	/* They don't even use this anymore */
 	CFNotificationCenterPostNotification(CFNotificationCenterGetDarwinNotifyCenter(),
 										 (CFStringRef)[_bundleIdentifier stringByAppendingString:@"-activated"],

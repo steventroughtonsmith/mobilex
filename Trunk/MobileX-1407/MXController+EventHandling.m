@@ -22,7 +22,8 @@
 {
 	CGPoint gp = CGPointMake(x, y);
 	[[MXMultitouchHandler shared] handleMultitouchEvent:gp type:type];
-}
+MXSLog(@"_handleMultitouchEvent");
+	   }
 
 - (void) _processDigitizerEvent:(GSEventRef)event
 {
@@ -31,6 +32,8 @@
 	
 	/* this is annoying */
 	CGPoint location = CGPointMake(MXScale()*(pathInfo.pathLocation.x), MXScale()*(pathInfo.pathLocation.y));
+	
+	MXSLog(@"_processDigitizerEvent: %i at %f,%f", handInfo.type, location.x, location.y);
 	
 	if (handInfo.type == kGSHandInfoTypeTouchDown) 
 	{
@@ -44,6 +47,7 @@
 	{
 		[self _handleMultitouchEvent:location.x y:location.y touchType:kMXTMoved finger:1];
 	}
+	
 }
 
 - (void) _processBrightnessChangedEvent:(GSEventRef)event
@@ -156,8 +160,17 @@ static NSTimer *exposeTimer;
 			[self _processBrightnessChangedEvent:event];
 			break;
 		default:
+		{
+#if TARGET_CPU_ARM
+			
 			MXSLog(@"Unknown event of type: %d",evt);
+#else
+			MXSLog(@"Handling simulated touch event");
+			
+			[self _processDigitizerEvent:event];
+#endif
 			break;
+		}
 	}
 	
 	[pool release];

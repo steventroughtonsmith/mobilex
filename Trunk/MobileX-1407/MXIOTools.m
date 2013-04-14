@@ -13,8 +13,11 @@ void _MXIOInterestCallback (void *refcon,io_service_t service,uint32_t messageTy
 	MXLog(@"IOPower: XXX");
 }
 
+
 CGSize MXIOGetScreenSize()
 {
+#if TARGET_CPU_ARM
+
 	/*
 	 * The default surface has the correct screen size.
 	 * So we can fetch it.
@@ -35,6 +38,7 @@ CGSize MXIOGetScreenSize()
 	printf("Copied screen size from MFB: {%f,%f} \n",size.width,size.height);
 	
 	return size;
+#endif
 }
 extern IOReturn IOPMAssertionCreateWithName( 
 										   CFStringRef AssertionType, 

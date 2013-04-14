@@ -164,6 +164,9 @@ static MXPlatformController* _shinst = nil;
 	[super init];
 	
 	[self discoverCurrentConfiguration];
+	
+	
+	
 	[self postCurrentConfiguration];
 	[self noteConfigurationChangedWithKeys:nil];
 	

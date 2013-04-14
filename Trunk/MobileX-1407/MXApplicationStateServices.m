@@ -78,7 +78,9 @@ void MXLaunchApplicationWithIdentifier(NSString* identifier)
 				MXHostWindow* appWnd = [[MXHostWindow alloc] initWithHostedLayer:renderer];
 				
 				[appWnd release];
+                
 				
+#if 1
 				if (isCheckInApp) {
 					[appWnd setIsFullscreen:isFullscreen];
 					[appWnd setFixed:TRUE];
@@ -124,15 +126,27 @@ void MXLaunchApplicationWithIdentifier(NSString* identifier)
 					else {
 						[renderer setContextOffset:CGRectMake(0, 0, 0, 0)];
 					}
-
+                    
 				}
+                
+#endif
 				
 				[appWnd setApplication:app];
 				[appWnd setText:[app displayName]];
 				[appWnd setNeedsDisplay];
-				
+                
+                             
+                if (!isCheckInApp)
+                {
+                    CGPoint appPos = appWnd.position;
+                    appWnd.position = CGPointMake(appPos.x, appPos.y+720.0);
+                    
+                    appWnd.isOffscreen = YES;
+                }
+                
 				[app launch];
-			}
+                
+                }
 			
 			OSSpinLockUnlock(&_launchLock);
 		}

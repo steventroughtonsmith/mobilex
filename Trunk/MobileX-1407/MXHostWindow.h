@@ -17,12 +17,18 @@
 	BOOL _isFullscreen;
 	BOOL _isSuspended;
 	BOOL _fixed;
+    BOOL _isOffscreen;
+
 }
 
 @property BOOL isFullscreen;
 @property BOOL fixed;
+@property BOOL isOffscreen;
 
 @property (retain) MXApplication* application;
 @property (readonly, retain) MXRenderLayer* renderLayer;
+
+
+-(void)animateOnscreen;
 
 @end

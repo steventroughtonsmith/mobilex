@@ -38,7 +38,7 @@
 	}
 	
 	if (!hasAtLeastOneAppRunning) {
-		[self reportError:@"Launchpad isn't running. Make sure 'Bundles.plist' has at least one autorun app in it and it isn't crashing."];
+		[self reportError:@"There is no launcher running. Make sure 'Bundles.plist' has at least one autorun app in it and it isn't crashing."];
 	}
 }
 
@@ -143,8 +143,14 @@ extern NSString* kCAContextDefinesDisplayBounds;
 			
 			MXSLog(@"CLCD windowserver init.");
 			
+#if TARGET_CPU_ARM
 			thisContext = 
 			[CAContext localContext];
+#else
+			thisContext = 
+			[CAContext remoteContext];
+		
+#endif
 		}
 		
 		_quartzContextId = [thisContext contextId];

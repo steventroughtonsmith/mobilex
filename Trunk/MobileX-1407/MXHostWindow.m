@@ -15,6 +15,17 @@
 @synthesize application=_application;
 @synthesize isFullscreen=_isFullscreen;
 @synthesize fixed=_fixed;
+@synthesize isOffscreen=_isOffscreen;
+
+- (BOOL) shouldAnimatePropertyForKey:(NSString*)key
+{
+	/* animate all properties for this menu */
+    
+    if (self.isOffscreen)
+	return YES;
+    
+    return NO;
+}
 
 - (void) setIsFullscreen:(BOOL)fs
 {
@@ -121,6 +132,24 @@
 - (void) applicationExited:(MXApplication *)application
 {
 	[self unregister];
+}
+
+-(void)animateOnscreen
+{
+    CGPoint appPos = self.position;
+    
+    appPos.y -= 720.0;
+    
+    [CATransaction begin];
+    [CATransaction setAnimationDuration:0.5];
+    [CATransaction setDisableActions:NO];
+    
+    self.position = appPos;
+    
+    [CATransaction commit];
+    
+    self.isOffscreen = NO;
+
 }
 
 @end

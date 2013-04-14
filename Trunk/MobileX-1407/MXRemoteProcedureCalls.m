@@ -36,6 +36,7 @@ kern_return_t _MXRPCCall_CallMethod(mach_port_t server,
 	if (selector == 'EXPS') {
 		[[MXPaneManager shared] toggleExpose];
 	}
+
 	
 	return KERN_SUCCESS;
 }

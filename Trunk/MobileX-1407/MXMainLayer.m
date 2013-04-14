@@ -16,7 +16,15 @@
 
 static MXMainLayer* _shinst = NULL;
 
-
+CGImageRef CreateImageFromPNGResource(CFStringRef resourceFileName) {
+	CGImageRef retVal = NULL;  // Try to get a URL to appropriate URL in our resources
+	CFURLRef resourceURL = CFBundleCopyResourceURL( CFBundleGetMainBundle(), resourceFileName, CFSTR("png"), NULL);  // if we succesfully obtained the URL, create an image from it.
+	if(NULL != resourceURL) {
+		CGDataProviderRef dataProvider = CGDataProviderCreateWithURL(resourceURL);  
+		retVal = CGImageCreateWithPNGDataProvider( dataProvider, NULL, true, kCGRenderingIntentDefault); 
+		CGDataProviderRelease(dataProvider); CFRelease(resourceURL); 
+	}  return retVal; 
+}
 
 @implementation MXMainLayer
 
@@ -36,21 +44,36 @@ static MXMainLayer* _shinst = NULL;
 - (void) drawInContext:(CGContextRef)ctx
 {
 	if (_hasError && _errorMessage) {
-		CGContextAddRect(ctx, CGRectMake(0, 0, self.frame.size.width, self.frame.size.height));
+		
+		CGRect drawRect = CGRectInset(self.bounds, 50, 50);
+		
+		CGContextAddRect(ctx, drawRect);
 		CGContextSetFillColorWithColor(ctx, RGB(0.05,0.05,0.05));
 		CGContextFillPath(ctx);
 		
+		
+		CGImageRef myDrawnImage = CreateImageFromPNGResource(CFSTR("MXLogo"));
+		
+		CGContextSaveGState(ctx);
+		CGContextScaleCTM(ctx, 1.0, -1.0);
+		
+		CGContextTranslateCTM(ctx, drawRect.origin.x+(floor((drawRect.size.width-561.)/2)), -(floor((drawRect.size.height+191.)/2)));
+		
+		CGContextDrawImage(ctx, CGRectMake(0, 0, 561., 191.), myDrawnImage);
+		CGContextRestoreGState(ctx);
+		
+		
 		CGDrawText(ctx,
 				   @"Error",
-				   [MXFont regularFontWithFamily:@"Helvetica" size:25],
+				   [MXFont boldFontWithFamily:@"Helvetica" size:25],
 				   RGB(1,1,1),
-				   CGRectMake(10, 0, 100, 100));
+				   CGRectMake(drawRect.origin.x+10, drawRect.origin.y+0, 100, 100));
 		
 		CGDrawText(ctx,
 				   _errorMessage,
 				   [MXFont regularFontWithFamily:@"Helvetica" size:14],
 				   RGB(0.5,0.5,0.5),
-				   CGRectMake(10, 50, 100, 100));
+				   CGRectMake(drawRect.origin.x+10, drawRect.origin.y+50, 100, 100));
 	}
 }
 
